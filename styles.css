@@ -45,7 +45,7 @@ header.site {
 .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
 .brand { font-weight: 700; letter-spacing: .3px; font-size: 1.05rem; color: var(--text); }
 .brand span { color: var(--accent); }
-.nav ul { display: flex; gap: 26px; list-style: none; }
+.nav ul { display: flex; align-items: center; gap: 20px; list-style: none; }
 .nav a { color: var(--muted); font-size: .95rem; }
 .nav a:hover, .nav a.active { color: var(--text); text-decoration: none; }
 .nav .cta {
@@ -53,6 +53,11 @@ header.site {
   font-weight: 600; font-size: .9rem;
 }
 .nav .cta:hover { filter: brightness(1.08); text-decoration: none; }
+.nav .cta-secondary {
+  border: 1px solid var(--line); color: var(--text); padding: 7px 14px; border-radius: 999px;
+  font-weight: 600; font-size: .9rem;
+}
+.nav .cta-secondary:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
 .menu-toggle { display: none; background: none; border: 0; color: var(--text); font-size: 1.5rem; cursor: pointer; }
 
 /* ---------- Hero ---------- */
@@ -125,6 +130,19 @@ article.post p { margin-bottom: 18px; color: #cdd6e6; }
 article.post ul, article.post ol { margin: 0 0 18px 22px; color: #cdd6e6; }
 article.post li { margin-bottom: 8px; }
 article.post blockquote { border-left: 3px solid var(--accent); padding: 8px 0 8px 18px; margin: 0 0 18px; color: var(--muted); }
+article.post h3 { margin: 22px 0 8px; font-size: 1.12rem; }
+/* hero image on a post */
+figure.post-hero { margin: 0 0 26px; }
+figure.post-hero img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line); display: block; }
+figure.post-hero figcaption { color: var(--muted); font-size: .78rem; margin-top: 8px; }
+/* thumbnail on index cards */
+.post-card { overflow: hidden; padding: 0; }
+.post-card .thumb-link { display: block; }
+.post-card .thumb { width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; display: block; }
+.post-card h3 { padding: 0 28px; margin-top: 22px; }
+.post-card .meta { padding: 0 28px; }
+.post-card > p { padding: 0 28px 26px; }
+.post-card:not(:has(.thumb-link)) h3 { margin-top: 26px; }
 
 /* ---------- Footer ---------- */
 footer.site { padding: 46px 0; color: var(--muted); font-size: .9rem; }

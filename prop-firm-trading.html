@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prop Firm Trading: How It Actually Works (From Someone Who Trades Them) | Josh Molnar</title>
+  <meta name="description" content="How prop firm trading really works: the challenge model, the rules that trip people up, the honest math of trading funded accounts, and how to actually pass — from full-time prop trader Josh Molnar." />
+  <link rel="canonical" href="https://joshmolnar.com/prop-firm-trading.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Prop Firm Trading: How It Actually Works" />
+  <meta property="og:description" content="The challenge model, the rules that trip people up, and how to actually pass — from someone who trades funded accounts." />
+  <meta property="og:url" content="https://joshmolnar.com/prop-firm-trading.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/josh-molnar.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Prop Firm Trading: How It Actually Works",
+    "description": "How prop firm trading works: the challenge model, the rules, the honest math, and how to pass — from a full-time prop trader.",
+    "datePublished": "2026-06-12",
+    "dateModified": "2026-06-12",
+    "mainEntityOfPage": "https://joshmolnar.com/prop-firm-trading.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is a prop firm?", "acceptedAnswer": { "@type": "Answer", "text": "A proprietary trading firm gives traders access to the firm's capital to trade, in exchange for a share of the profits. Most modern online prop firms first require you to pass an evaluation or challenge that proves you can trade profitably within their risk rules before they fund you." } },
+      { "@type": "Question", "name": "How do prop firm challenges work?", "acceptedAnswer": { "@type": "Answer", "text": "You pay a fee for an evaluation account and must hit a profit target without breaking the firm's rules, typically a maximum daily loss and a maximum overall drawdown. Pass, and you get a funded account where you trade the firm's capital and keep a large share of the profits, often 80 to 90 percent." } },
+      { "@type": "Question", "name": "Are prop firms worth it?", "acceptedAnswer": { "@type": "Answer", "text": "For a trader who already has a tested edge and disciplined risk management, yes — prop firms solve the capital problem that otherwise makes trading for a living nearly impossible. For someone without a proven process, no; the challenge fees simply become another way to lose money." } },
+      { "@type": "Question", "name": "Why do most people fail prop firm challenges?", "acceptedAnswer": { "@type": "Answer", "text": "Not because the profit target is hard, but because they break the drawdown rules by over-sizing positions and revenge trading. The challenge is really a risk-management test disguised as a profit test." } }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html" class="active">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:40px">
+      <div class="wrap">
+        <div class="eyebrow">Prop Firms</div>
+        <h1>Prop Firm Trading: How It Actually Works</h1>
+        <p class="lead">Prop firms are the single best solution to the biggest problem in trading: capital. They are also widely misunderstood and full of traps. Here is the honest breakdown from someone who trades funded accounts.</p>
+      </div>
+    </section>
+
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <p>In <a href="/trading-for-a-living.html">trading for a living</a> I made the point that your income is your return times your capital, and that capital, not strategy, is what stops most people. <strong>Prop firms exist to solve exactly that.</strong> They let a proven trader control far more capital than they own, which turns a good return into a livable income. Used well, they are a genuine career path. Used badly, they are a fee machine. The difference is entirely about whether you bring a real edge.</p>
+
+          <h2>What a prop firm actually is</h2>
+          <p>A proprietary trading firm trades its own capital, and modern online prop firms let outside traders trade that capital in exchange for a cut of the profits. You are not investing your money into the markets; you are being evaluated and then funded to trade theirs. In return, the firm keeps a share of what you make, commonly 10 to 20 percent, and you keep the rest.</p>
+
+          <h2>The challenge model</h2>
+          <p>Almost every online prop firm works the same way:</p>
+          <ol>
+            <li><strong>You pay a fee</strong> for an evaluation (a "challenge") account with a set balance.</li>
+            <li><strong>You hit a profit target</strong> — often around 8 to 10 percent — to prove you can make money.</li>
+            <li><strong>Without breaking the risk rules</strong>, which are the real test (more on these below).</li>
+            <li><strong>You get funded.</strong> Pass, and you receive a funded account trading the firm's capital, keeping the large majority of profits.</li>
+          </ol>
+          <p>The fee is the firm's revenue and your skin in the game. The genius and the danger of the model is the same thing: it is cheap to attempt relative to the capital you can end up controlling, which attracts a lot of people who are not ready.</p>
+
+          <h2>The rules that actually trip people up</h2>
+          <p>Beginners fixate on the profit target. Experienced traders know the target is the easy part. What fails you is the risk rules:</p>
+          <ul>
+            <li><strong>Maximum daily loss.</strong> Lose more than a set amount in one day and the account is gone, target or not.</li>
+            <li><strong>Maximum overall drawdown.</strong> A hard floor on the account. Touch it and you are out.</li>
+            <li><strong>Consistency and time rules.</strong> Some firms require a minimum number of trading days or limit how much of your profit can come from a single trade, to filter out gamblers who got lucky.</li>
+          </ul>
+          <p>Read that again and you will see the truth of it: <strong>a prop firm challenge is a risk-management test wearing a profit-target costume.</strong> They are not really asking "can you make 10%." They are asking "can you make 10% without ever losing control." That is exactly the skill that makes someone able to trade for a living, which is why the model works.</p>
+
+          <h2>Why most people fail (and how to pass)</h2>
+          <p>People fail challenges for the same reason they blow up their own accounts: they over-size positions, then revenge trade after a loss, and breach the drawdown. The fix is not a better strategy, it is discipline:</p>
+          <ul>
+            <li><strong>Risk a small, fixed fraction</strong> of the account per trade — far smaller than the daily loss limit — so a normal losing streak cannot breach the rules.</li>
+            <li><strong>Treat the daily loss limit as half what it says.</strong> Stop well before it. The goal is to never be near it.</li>
+            <li><strong>Aim for the target slowly.</strong> You do not need to pass in a day. Small, consistent gains pass challenges; home-run swings fail them.</li>
+            <li><strong>Trade the same process you proved elsewhere.</strong> A challenge is not the time to experiment.</li>
+          </ul>
+
+          <h2>Who prop firms are right for</h2>
+          <p>Let me be honest about both sides. Prop firms are <strong>right</strong> for a trader who already has a tested edge and just needs capital. They are <strong>wrong</strong> for someone hoping the challenge will somehow turn an unprofitable process into a profitable one. If you do not yet make money on a small account, you will not make money on a funded one; you will just pay challenge fees to learn that. Build the skill first. <a href="/day-trading-crypto.html">Here is how I approach the actual trading.</a></p>
+
+          <div class="card" style="margin-top:36px">
+            <h3>Thinking about going the prop firm route?</h3>
+            <p>I trade funded accounts and coach traders through passing challenges the right way — sizing, drawdown discipline, and the process that keeps a funded account alive. If you want help, work with me directly.</p>
+            <p style="margin-top:14px"><a class="btn primary" href="https://bitcoindaily.app" rel="noopener">Work with me</a> <a class="btn ghost" href="/trading-for-a-living.html">Read: trading for a living →</a></p>
+          </div>
+
+          <p style="margin-top:28px"><em>Nothing here is financial advice or an endorsement of any specific prop firm. Prop firm challenges carry fees and risk, and most participants do not pass. Do your own due diligence and never risk money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

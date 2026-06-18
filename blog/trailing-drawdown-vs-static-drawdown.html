@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trailing Drawdown vs Static Drawdown: What Prop Firm Traders Need to Know | Josh Molnar</title>
+  <meta name="description" content="Trailing drawdown vs static drawdown explained: what each rule actually means, how EOD vs intraday trailing differ, and why it changes how you manage a prop firm account." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/trailing-drawdown-vs-static-drawdown.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Trailing Drawdown vs Static Drawdown: What Prop Firm Traders Need to Know" />
+  <meta property="og:description" content="Most prop firm traders pick an account without understanding the drawdown rule. Here is what the difference actually costs you." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/trailing-drawdown-vs-static-drawdown.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/trailing-drawdown-vs-static-drawdown.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trailing Drawdown vs Static Drawdown: What Prop Firm Traders Need to Know" />
+  <meta name="twitter:description" content="Most prop firm traders pick an account without understanding the drawdown rule. Here is what the difference actually costs you." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/trailing-drawdown-vs-static-drawdown.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Trailing Drawdown vs Static Drawdown: What Prop Firm Traders Need to Know",
+    "image": "https://joshmolnar.com/assets/blog/trailing-drawdown-vs-static-drawdown.jpg",
+    "description": "Trailing drawdown vs static drawdown explained: what each rule actually means, how EOD vs intraday trailing differ, and why it changes how you manage a prop firm account.",
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/trailing-drawdown-vs-static-drawdown.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between trailing drawdown and static drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "Static drawdown sets your breach floor once at account open and it never changes, so profits expand your safety buffer. Trailing drawdown raises the floor as your equity reaches new highs, so your buffer stays the same size no matter how much you earn."}}, {"@type": "Question", "name": "What is EOD trailing drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "EOD stands for end of day. The trailing floor only recalculates once per session at close, based on your closed profit and loss. Unrealized gains on open positions during the session do not move the floor until the day ends."}}, {"@type": "Question", "name": "Which prop firms use static drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "FTMO is the most well-known firm using a static maximum loss rule: 10 percent of the initial account balance, fixed for the life of the account. Most other major prop firms use some form of trailing drawdown."}}, {"@type": "Question", "name": "Can you breach a prop firm trailing drawdown account while profitable?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If your equity reached an intraday high that moved the trailing floor up, and you then gave back those gains, you can breach even if your session or cumulative result is flat or slightly positive. Your balance relative to your starting value is not the number to watch. Your equity relative to the current floor is."}}, {"@type": "Question", "name": "Is trailing drawdown or static drawdown better for day traders?", "acceptedAnswer": {"@type": "Answer", "text": "Static is more forgiving once you are consistently profitable because profits widen your buffer. EOD trailing is a reasonable middle ground for active day traders since intraday volatility does not move the floor. Intraday trailing demands the strictest trade management of the three."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>Trailing Drawdown vs Static Drawdown: What Prop Firm Traders Need to Know</h1>
+          <div class="meta">By Josh Molnar &middot; June 2026 &middot; 7 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/trailing-drawdown-vs-static-drawdown.jpg" alt="Branded card explaining trailing drawdown vs static drawdown for prop firm traders" />
+          </figure>
+<p>Before you fund a prop firm evaluation, there is one rule that will shape every trade you take once you are live: the drawdown rule. Most traders read the headline number, see something like &ldquo;5 percent max drawdown,&rdquo; and assume they understand the risk. They do not. Whether that drawdown is <strong>trailing</strong> or <strong>static</strong> changes the math completely, and picking the wrong one for your trading style is one of the most common reasons funded traders get breached on accounts they should have kept.</p>
+
+<p>I have traded both types. Here is what you actually need to know.</p>
+
+<h2>Static drawdown: the floor that never moves</h2>
+<p>With a static drawdown rule, your breach floor is set once at the moment your account is opened, and it never changes. If you start a 100,000 dollar account with a 10 percent static drawdown, your floor is locked at 90,000 dollars for the life of the account.</p>
+
+<p>That sounds obvious until you think through the implication: every dollar you earn genuinely expands your buffer. If you grow the account to 130,000 dollars, your floor is still 90,000 dollars. You now have 40,000 dollars of cushion between your equity and a breach. Profits work in your favor in the most direct way possible.</p>
+
+<p>FTMO uses this model. Their maximum loss is 10 percent of the initial balance, fixed, with an additional 5 percent daily loss limit. Once you are profitable, every gain goes entirely to widening your safety margin. That structural simplicity is a big reason many experienced traders prefer FTMO-style accounts once they understand the difference.</p>
+
+<h2>Trailing drawdown: the floor that follows your highs</h2>
+<p>With a trailing drawdown rule, the floor moves up as your account reaches new equity highs. It never moves down. Your profits do not expand your buffer. Instead, they raise the minimum your account must stay above.</p>
+
+<p>Example: You start at 100,000 dollars with a 3,000 dollar trailing drawdown. Your floor starts at 97,000 dollars. You have a good week and grow to 106,000 dollars. Your floor has now trailed up to 103,000 dollars. Your buffer is still 3,000 dollars, exactly the same as day one. Every gain you lock in raises the floor by the same amount.</p>
+
+<p>Prop firms use trailing drawdown because it protects their capital from a specific pattern: traders who run up big gains on volatile positions and then give everything back. It works. But it also means your safety margin never actually grows, no matter how well you trade.</p>
+
+<h2>EOD trailing vs intraday trailing: a critical distinction</h2>
+<p>If you are evaluating an account with trailing drawdown, the next question matters just as much: does the floor trail at end of day or in real time?</p>
+
+<p><strong>EOD (end-of-day) trailing</strong> recalculates the floor once per session at close, based only on your closed profit and loss. Unrealized gains on open positions do not move the floor during the session. Apex Trader Funding&rsquo;s EOD accounts work this way, recalculating at 4:59:59 PM ET on the closed balance. You can be up 2,000 dollars intraday, take a partial reversal, and as long as you close the session up 1,000 dollars, only 1,000 dollars of trailing movement happens overnight.</p>
+
+<p><strong>Intraday trailing</strong> follows your live equity in real time, including unrealized profit on open positions. Every new equity high permanently locks in a higher floor, even if the position has not closed. Topstep&rsquo;s Combine evaluation uses this model. Apex also offers intraday trailing accounts as an alternative.</p>
+
+<p>Here is the scenario that catches traders off guard with intraday trailing: you enter a long, the position runs up 2,000 dollars, the floor moves up 2,000 dollars, and then the trade reverses back to your entry. You are flat on the trade. But your floor has permanently moved up 2,000 dollars. You are now 2,000 dollars closer to a breach than you were before you entered, despite not losing anything on the position.</p>
+
+<p>That is not a bug in the rules. It is the rule working exactly as designed. But if you did not expect it, it can feel like the account breached for no reason.</p>
+
+<h2>The misconception that ends funded accounts</h2>
+<p>The most expensive misunderstanding I see is this: traders assume they are safe from a breach as long as their account balance is above their starting value. With static drawdown, that is mostly true. With trailing drawdown, it is completely false.</p>
+
+<p>On a trailing account, you can be above your starting balance and still be within a hundred dollars of a breach, if you had strong intraday peaks that moved the floor up before a reversal. The number to watch is not your account balance relative to your starting balance. It is your current equity relative to the current trailing floor, which changes throughout the session.</p>
+
+<p>This is why understanding the <a href='/prop-firm-trading.html'>mechanics of prop firm trading</a> before you fund matters so much. The drawdown rule is not fine print. It is the operating environment your entire strategy has to function inside.</p>
+
+<h2>Which drawdown type fits which trading style</h2>
+<p>Static drawdown suits traders who want profits to compound their safety margin over time. If you have a consistent, lower-volatility approach, static is the most forgiving structure once you are profitable.</p>
+
+<p>EOD trailing suits traders who need intraday flexibility. Because unrealized swings do not move the floor during the session, you have room to manage positions without being punished for normal intraday volatility. The floor only adjusts once per day on closed results.</p>
+
+<p>Intraday trailing demands the tightest trade management. Your stops have to be placed with the trailing floor in mind, not just your target and your entry. A position that runs strongly before reversing can leave you in a worse capital position than if you had simply not taken it. This is not a reason to avoid intraday trailing accounts, but it is a reason to size down, manage runners carefully, and never let a winning position become a breach event.</p>
+
+<p>I cover position sizing and the mechanics of keeping your risk fixed regardless of account type in my post on <a href='/blog/how-much-to-risk-per-trade.html'>how much to risk per trade</a>. Those principles apply across every drawdown structure.</p>
+
+<h2>A practical checklist before you choose</h2>
+<ul>
+<li>Is the drawdown static or trailing? Static expands your buffer as you profit. Trailing does not.</li>
+<li>If trailing, does it recalculate EOD or intraday? Intraday trailing is the strictest environment.</li>
+<li>What is the actual dollar buffer at account open, not just the percentage? On a 50,000 dollar account with 2,000 dollar trailing, one bad day can end the evaluation.</li>
+<li>Does the account have a separate daily loss limit on top of the trailing floor? Some firms layer both.</li>
+<li>Does the trailing floor lock once it reaches your starting balance, or does it keep climbing above it? Some funded accounts freeze the floor at the opening balance once it trails up that high, which meaningfully changes the long-run math.</li>
+</ul>
+
+<p>None of this is a reason to avoid prop firms. The evaluation model is one of the few realistic paths to trading significant capital without risking your own life savings. But you have to know the rules you are operating under before you take your first trade, not after the breach email arrives.</p>
+          <h2>Common questions</h2>
+          <h3>What is the difference between trailing drawdown and static drawdown?</h3>
+          <p>Static drawdown sets your breach floor once at account open and it never changes, so profits expand your safety buffer. Trailing drawdown raises the floor as your equity reaches new highs, so your buffer stays the same size no matter how much you earn.</p>
+          <h3>What is EOD trailing drawdown?</h3>
+          <p>EOD stands for end of day. The trailing floor only recalculates once per session at close, based on your closed profit and loss. Unrealized gains on open positions during the session do not move the floor until the day ends.</p>
+          <h3>Which prop firms use static drawdown?</h3>
+          <p>FTMO is the most well-known firm using a static maximum loss rule: 10 percent of the initial account balance, fixed for the life of the account. Most other major prop firms use some form of trailing drawdown.</p>
+          <h3>Can you breach a prop firm trailing drawdown account while profitable?</h3>
+          <p>Yes. If your equity reached an intraday high that moved the trailing floor up, and you then gave back those gains, you can breach even if your session or cumulative result is flat or slightly positive. Your balance relative to your starting value is not the number to watch. Your equity relative to the current floor is.</p>
+          <h3>Is trailing drawdown or static drawdown better for day traders?</h3>
+          <p>Static is more forgiving once you are consistently profitable because profits widen your buffer. EOD trailing is a reasonable middle ground for active day traders since intraday volatility does not move the floor. Intraday trailing demands the strictest trade management of the three.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/how-much-to-risk-per-trade.html">How Much Should You Risk Per Trade? The 1% Rule</a></li>
+            <li><a href="/blog/crypto-trading-mistakes.html">Crypto Trading Mistakes That Cost Real Money</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

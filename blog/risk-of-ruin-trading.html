@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Risk of Ruin in Trading: The Math of Survival | Josh Molnar</title>
+  <meta name="description" content="Risk of ruin in trading explained simply: why the size of your bets matters more than your win rate, and the survival math every trader needs." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/risk-of-ruin-trading.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Risk of Ruin in Trading: The Math of Survival" />
+  <meta property="og:description" content="Your win rate does not decide if you survive. Your bet size does. Here is the math." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/risk-of-ruin-trading.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/risk-of-ruin-trading.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Risk of Ruin in Trading: The Math of Survival" />
+  <meta name="twitter:description" content="Your win rate does not decide if you survive. Your bet size does. Here is the math." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/risk-of-ruin-trading.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Risk of Ruin in Trading: The Math of Survival",
+    "image": "https://joshmolnar.com/assets/blog/risk-of-ruin-trading.jpg",
+    "description": "Risk of ruin in trading explained simply: why the size of your bets matters more than your win rate, and the survival math every trader needs.",
+    "datePublished": "2026-06-28",
+    "dateModified": "2026-06-28",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/risk-of-ruin-trading.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is risk of ruin in trading?", "acceptedAnswer": {"@type": "Answer", "text": "Risk of ruin is the probability that your trading account will lose so much money that you can no longer trade or recover. It depends mostly on how much you risk per trade, not on your win rate."}}, {"@type": "Question", "name": "How do you calculate risk of ruin?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on your win rate, your average win size versus your average loss size, and how much you risk per trade. The single fastest way to lower it is to reduce your risk per trade to 1 percent or less."}}, {"@type": "Question", "name": "What is an acceptable risk of ruin?", "acceptedAnswer": {"@type": "Answer", "text": "Professional traders aim for a risk of ruin close to zero. If your risk of ruin is above 1 percent, you are risking too much per trade and a normal losing streak could end your account."}}, {"@type": "Question", "name": "Can a high win rate protect you from ruin?", "acceptedAnswer": {"@type": "Answer", "text": "No. Even a strategy that wins most of the time can blow up if the bet size is too large. A normal losing streak will eventually happen, and if each loss takes too big a chunk, you will not recover."}}, {"@type": "Question", "name": "How much should I risk per trade to avoid ruin?", "acceptedAnswer": {"@type": "Answer", "text": "Most professionals risk 1 to 2 percent of their account per trade. At 1 percent risk, even a long losing streak only costs a small fraction of the account, keeping ruin nearly impossible."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>Risk of Ruin in Trading: The Math of Survival</h1>
+          <div class="meta">By Josh Molnar &middot; June 2026 &middot; 6 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/risk-of-ruin-trading.jpg" alt="Risk of ruin in trading concept showing why survival math matters more than win rate" />
+          </figure>
+<p>Risk of ruin is the single most important concept in trading that almost nobody talks about. It answers one question: how likely is it that you blow up your account? Not on one bad trade, but over the full life of your trading career. I have watched more accounts die from ignoring this idea than from bad entries, bad timing, or bad markets combined.</p>
+
+<h2>What Is Risk of Ruin in Trading?</h2>
+<p>Think of it like this. Every time you place a trade, you are making a bet. If you lose enough bets in a row, your account drops so low that you either cannot trade anymore or you cannot realistically recover. Risk of ruin is the probability that this happens to you. Not if you have a bad week. If you eventually go broke.</p>
+<p>The uncomfortable truth is that even a strategy that wins 60 percent of the time can still blow up your account. How? If the amount you risk per trade is too large, a normal losing streak will destroy you before the wins have a chance to add up. Losing streaks are not bad luck. They are a guaranteed part of trading. The only question is whether your account can survive them.</p>
+
+<h2>Why Bet Size Matters More Than Win Rate</h2>
+<p>Most beginners obsess over finding a strategy with a high win rate. But the math of survival does not care how often you win nearly as much as it cares how much you lose when you lose. Here is the simplest way I explain it to people I mentor:</p>
+<ul>
+<li>Risk 1 percent of your account per trade. Ten losses in a row costs you roughly 10 percent. Painful, but you are still in the game and your account recovers with a normal winning stretch.</li>
+<li>Risk 5 percent per trade. Ten losses in a row wipes out about 40 percent. Now you need to nearly double your remaining money just to get back to where you started.</li>
+<li>Risk 10 percent per trade. Ten losses erases about 65 percent. Recovery is almost impossible without taking even bigger risks, which only accelerates the spiral.</li>
+</ul>
+<p>Ten losses in a row sounds extreme. It is not. If your strategy wins 55 percent of the time, a run of ten straight losses will happen eventually over thousands of trades. It is not a question of if. It is a question of when, and whether your account is still standing when it arrives.</p>
+
+<h2>The Two Things That Control Your Risk of Ruin</h2>
+<p>Only two numbers really matter here:</p>
+<ul>
+<li><strong>How much you risk per trade.</strong> This is the single biggest lever. Smaller risk per trade means your account can absorb longer losing streaks. I keep mine at 1 to 2 percent, and I explain the full mechanics in my breakdown of <a href='/blog/how-much-to-risk-per-trade.html'>how much to risk per trade</a>.</li>
+<li><strong>Your edge over time.</strong> This is the combination of how often you win and how big your winners are compared to your losers. A strategy that wins 45 percent of the time but makes twice as much on wins as it loses on losses has a real edge. But even a strong edge cannot save you from oversized bets.</li>
+</ul>
+<p>That second point is where people get confused. They think a great strategy protects them. It does not. A great strategy with reckless sizing will still blow up. A mediocre strategy with disciplined sizing can survive for years.</p>
+
+<h2>Why This Hits Harder on Funded Accounts</h2>
+<p>If you trade <a href='/prop-firm-trading.html'>prop firm accounts</a>, risk of ruin is not abstract. It is the daily loss limit and the maximum loss limit written into your contract. Break either one and your account is gone, along with the fee you paid to get it. The firms are essentially asking: can you survive a normal losing streak without panicking? Most people cannot, and it shows. Fewer than 1 in 10 pass a prop firm challenge on the first try, and the main reason is not a bad strategy. It is oversizing trades and then revenge trading after a loss.</p>
+
+<h2>How to Make Your Risk of Ruin Close to Zero</h2>
+<p>The fix is boring. That is why it works.</p>
+<ul>
+<li><strong>Fix your risk per trade at 1 percent or less.</strong> Calculate position size from your stop distance every single time. Never eyeball it. Never round up because you feel confident.</li>
+<li><strong>Never move your stop to give a losing trade more room.</strong> The moment you widen a stop, you have broken your risk rule and your actual loss is now larger than what you planned.</li>
+<li><strong>Set a daily loss limit.</strong> If you lose 2 to 3 percent in a day, stop. Walk away. Come back tomorrow. This prevents a bad morning from turning into a blown week.</li>
+<li><strong>Track everything.</strong> If you do not write down every trade, you have no idea whether your edge is real or whether you are slowly bleeding out. A journal is how you catch the problem before your account catches it for you.</li>
+</ul>
+<p>I tell every person I mentor the same thing. Survival is not a phase you pass through on the way to profits. Survival IS the strategy. If you stay in the game long enough with a real edge and disciplined sizing, the math works for you over time. If you blow up, none of your analysis or screen time mattered. That is the whole idea behind <a href='/trading-for-a-living.html'>trading for a living</a>: it is a career built on not dying, day after day, for years.</p>
+
+<h2>The Bottom Line</h2>
+<p>Risk of ruin is not a fancy concept. It is the answer to a simple question: will your account survive long enough for your edge to pay off? If you risk too much per trade, the answer is no, regardless of how good your strategy is. Keep your bets small, keep your stops real, and treat survival as job number one. Everything else follows from that.</p>
+          <h2>Common questions</h2>
+          <h3>What is risk of ruin in trading?</h3>
+          <p>Risk of ruin is the probability that your trading account will lose so much money that you can no longer trade or recover. It depends mostly on how much you risk per trade, not on your win rate.</p>
+          <h3>How do you calculate risk of ruin?</h3>
+          <p>It depends on your win rate, your average win size versus your average loss size, and how much you risk per trade. The single fastest way to lower it is to reduce your risk per trade to 1 percent or less.</p>
+          <h3>What is an acceptable risk of ruin?</h3>
+          <p>Professional traders aim for a risk of ruin close to zero. If your risk of ruin is above 1 percent, you are risking too much per trade and a normal losing streak could end your account.</p>
+          <h3>Can a high win rate protect you from ruin?</h3>
+          <p>No. Even a strategy that wins most of the time can blow up if the bet size is too large. A normal losing streak will eventually happen, and if each loss takes too big a chunk, you will not recover.</p>
+          <h3>How much should I risk per trade to avoid ruin?</h3>
+          <p>Most professionals risk 1 to 2 percent of their account per trade. At 1 percent risk, even a long losing streak only costs a small fraction of the account, keeping ruin nearly impossible.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/how-much-to-risk-per-trade.html">How Much Should You Risk Per Trade? The 1% Rule</a></li>
+            <li><a href="/blog/crypto-trading-mistakes.html">The 5 Mistakes That Wipe Out 95% of New Crypto Traders</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

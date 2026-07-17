@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>When Your Trading Strategy Stops Working | Josh Molnar</title>
+  <meta name="description" content="Your trading strategy stopped working. Before you change anything, run these three questions. A diagnostic framework from trader Josh Molnar." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/when-your-trading-strategy-stops-working.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="When Your Trading Strategy Stops Working" />
+  <meta property="og:description" content="Before you change a single rule, ask these three questions in order." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/when-your-trading-strategy-stops-working.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/when-your-trading-strategy-stops-working.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="When Your Trading Strategy Stops Working" />
+  <meta name="twitter:description" content="Before you change a single rule, ask these three questions in order." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/when-your-trading-strategy-stops-working.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "When Your Trading Strategy Stops Working",
+    "image": "https://joshmolnar.com/assets/blog/when-your-trading-strategy-stops-working.jpg",
+    "description": "Your trading strategy stopped working. Before you change anything, run these three questions. A diagnostic framework from trader Josh Molnar.",
+    "datePublished": "2026-07-17",
+    "dateModified": "2026-07-17",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/when-your-trading-strategy-stops-working.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long should I give a trading strategy before deciding it has stopped working?", "acceptedAnswer": {"@type": "Answer", "text": "You need enough trades to see a meaningful pattern, typically 30 to 50 live results at minimum. A strategy that takes five trades a month needs at least six to ten months before a cold streak tells you anything definitive."}}, {"@type": "Question", "name": "How do I know if my trading strategy stopped working permanently?", "acceptedAnswer": {"@type": "Answer", "text": "Ask three questions in order. Did the edge exist on data the strategy never trained on? Did the market regime shift? Did your execution change? If the edge was never validated on truly new data, it likely was not real to begin with."}}, {"@type": "Question", "name": "Should I change my trading strategy during a losing streak?", "acceptedAnswer": {"@type": "Answer", "text": "In most cases, no. Changing rules during a losing streak usually means fitting the strategy to recent losses, which creates a new untested system. Run the diagnostic first, reduce size if needed, and only make changes if the evidence clearly points to a broken or false edge."}}, {"@type": "Question", "name": "What is a regime change in trading?", "acceptedAnswer": {"@type": "Answer", "text": "It means the market started behaving differently than when your strategy was built. A method that works in a trending market will struggle when the market chops sideways for months. Most strategies recover when conditions return to normal."}}, {"@type": "Question", "name": "What should I do if my strategy never had a real edge?", "acceptedAnswer": {"@type": "Answer", "text": "Test your rules on data the strategy never touched during development. If it fails there, go back to the drawing board rather than trading it live with real money."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>When Your Trading Strategy Stops Working</h1>
+          <div class="meta">By Josh Molnar &middot; July 2026 &middot; 6 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/when-your-trading-strategy-stops-working.jpg" alt="Concept image for diagnosing when your trading strategy stops working" />
+          </figure>
+<p>Every trader hits the same wall eventually. A strategy that worked stops delivering. The setups look right, you take the trades, and the results come back wrong. It feels like the market has personally decided to break your specific method. I have been there with my own systems, and I tell the people I mentor the same thing every time: before you change anything, run through three questions in order. Most of the time the answer is in the first or second one.</p>
+
+<h2>Question one: did the edge ever really exist?</h2>
+<p>This is the uncomfortable one, and it has to come first. A lot of strategies look brilliant on a backtest but never had real edge to begin with. If you tested your strategy on the same data you used to build it, the results can look great just from pure luck. Twelve correct trades in a row can happen by chance even with a completely random entry. So the first thing I ask is: was this strategy ever validated on data it had never seen before?</p>
+<p>If the answer is no, the strategy did not stop working. It never worked. That is actually the easier fix: build a proper test on truly new data before putting real money on any method. I walk through how I think about real edge in my post on <a href='/blog/what-is-a-trading-edge.html'>what a trading edge actually is</a>.</p>
+<p>If you did test it honestly on out-of-sample data and it was profitable there, move to question two.</p>
+
+<h2>Question two: did the market change?</h2>
+<p>Markets go through phases. Sometimes they trend smoothly. Sometimes they chop sideways and reverse without warning. A strategy built in a trending phase can lose consistently in a choppy phase even though nothing is broken with the logic. This is called a regime shift, which just means the market is behaving differently than the conditions your strategy was built for.</p>
+<p>The way I check this is simple. I look at whether the same setups that used to work are now triggering in a fundamentally different environment. If volatility has dropped by half and my strategy relies on big moves, that explains the problem. The strategy is not broken. The conditions it needs are temporarily absent.</p>
+<p>Most strategies eventually come back to life when the market returns to the conditions they were built for. The key word is <em>eventually</em>. Regime shifts can last months. You have to decide whether to wait or sit it out in smaller size. But changing the strategy while you are in the middle of this is almost always a mistake.</p>
+
+<h2>Question three: did your execution change?</h2>
+<p>Sometimes the strategy is fine and the market is fine and the problem is you. A few bad trades can shake confidence, and shaken confidence leads to skipping setups, cutting winners early, or moving stops before they are hit. These small execution changes do not feel like a big deal in the moment. Over fifty trades they completely change the results.</p>
+<p>The fix here is a <a href='/blog/how-to-keep-a-trading-journal.html'>trading journal</a> that tracks not just your entries and exits but whether you followed your rules on every single trade. If your mechanical results look fine but your actual results are worse, execution drift is almost certainly the culprit.</p>
+
+<h2>The one thing not to do</h2>
+<p>The most common mistake is to start changing the strategy during a losing streak. I understand the impulse. The losses feel like evidence that something is wrong with the rules, so you tweak the entry, adjust the stop, add a filter. Now you have a new strategy with no track record instead of a tested strategy going through a normal rough patch.</p>
+<p>Changing a strategy and then testing it on the same market it just failed on is not a fix. It is just fitting the rules to the recent past. Do the three questions first. Change the strategy only if question one gives you a clear answer that the edge was never real, or if question two reveals the market has permanently changed in a way your strategy cannot adapt to.</p>
+
+<h2>How I handle it</h2>
+<p>When one of my systems hits a rough patch, I reduce the size I am trading until I know which category it falls into. I do not go to zero unless the edge turns out to have been false. I keep taking the setups at smaller size so I do not end up on the sidelines when the strategy returns to its normal performance. Reducing size is not quitting. It is staying in the game while you figure out the answer.</p>
+<p>If you are <a href='/trading-for-a-living.html'>trading for a living</a> or working toward it, this three-question process is what separates traders who survive a rough stretch from traders who blow up or quit. The goal is not to find a strategy that never loses. The goal is to know your strategy well enough to tell the difference between a normal losing period and an actual broken edge.</p>
+          <h2>Common questions</h2>
+          <h3>How long should I give a trading strategy before deciding it has stopped working?</h3>
+          <p>You need enough trades to see a meaningful pattern, typically 30 to 50 live results at minimum. A strategy that takes five trades a month needs at least six to ten months before a cold streak tells you anything definitive.</p>
+          <h3>How do I know if my trading strategy stopped working permanently?</h3>
+          <p>Ask three questions in order. Did the edge exist on data the strategy never trained on? Did the market regime shift? Did your execution change? If the edge was never validated on truly new data, it likely was not real to begin with.</p>
+          <h3>Should I change my trading strategy during a losing streak?</h3>
+          <p>In most cases, no. Changing rules during a losing streak usually means fitting the strategy to recent losses, which creates a new untested system. Run the diagnostic first, reduce size if needed, and only make changes if the evidence clearly points to a broken or false edge.</p>
+          <h3>What is a regime change in trading?</h3>
+          <p>It means the market started behaving differently than when your strategy was built. A method that works in a trending market will struggle when the market chops sideways for months. Most strategies recover when conditions return to normal.</p>
+          <h3>What should I do if my strategy never had a real edge?</h3>
+          <p>Test your rules on data the strategy never touched during development. If it fails there, go back to the drawing board rather than trading it live with real money.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/what-is-a-trading-edge.html">What Is a Trading Edge?</a></li>
+            <li><a href="/blog/losing-streak-trading.html">How to Handle a Trading Losing Streak</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

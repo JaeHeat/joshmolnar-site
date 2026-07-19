@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Backtest a Trading Strategy | Josh Molnar</title>
+  <meta name="description" content="How to backtest a trading strategy the right way. A plain, step-by-step process for testing your rules on real data before risking real money." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/how-to-backtest-a-trading-strategy.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Backtest a Trading Strategy" />
+  <meta property="og:description" content="Most traders skip this step and pay the market to find out their strategy never worked. Here is how to backtest before you bleed." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/how-to-backtest-a-trading-strategy.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/how-to-backtest-a-trading-strategy.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Backtest a Trading Strategy" />
+  <meta name="twitter:description" content="Most traders skip this step and pay the market to find out their strategy never worked. Here is how to backtest before you bleed." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/how-to-backtest-a-trading-strategy.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Backtest a Trading Strategy",
+    "image": "https://joshmolnar.com/assets/blog/how-to-backtest-a-trading-strategy.jpg",
+    "description": "How to backtest a trading strategy the right way. A plain, step-by-step process for testing your rules on real data before risking real money.",
+    "datePublished": "2026-07-19",
+    "dateModified": "2026-07-19",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/how-to-backtest-a-trading-strategy.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many trades do you need for a valid backtest?", "acceptedAnswer": {"@type": "Answer", "text": "At least 30 to 50 trades. Fewer than that and your results could easily be random luck rather than a real pattern."}}, {"@type": "Question", "name": "Can you backtest without coding?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A charting platform with replay mode and a simple spreadsheet is enough. Manual backtesting builds screen time and understanding before you automate."}}, {"@type": "Question", "name": "What is a good win rate in a backtest?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single good number. A 40 percent win rate with a 2 to 1 reward ratio is profitable. What matters is the combination of win rate and average reward versus average loss."}}, {"@type": "Question", "name": "How far back should you backtest?", "acceptedAnswer": {"@type": "Answer", "text": "At least 6 months, ideally 1 to 2 years. You want to see your rules work across different market conditions, not just one favorable stretch."}}, {"@type": "Question", "name": "Does a profitable backtest guarantee live profits?", "acceptedAnswer": {"@type": "Answer", "text": "No. A backtest shows that your rules worked historically. Live execution adds emotions, slippage, and real-time uncertainty. Forward testing on a demo account is the next step before risking real money."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>How to Backtest a Trading Strategy</h1>
+          <div class="meta">By Josh Molnar &middot; July 2026 &middot; 7 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/how-to-backtest-a-trading-strategy.jpg" alt="Branded card for How to Backtest a Trading Strategy by Josh Molnar" />
+          </figure>
+<p>If you have never tested your trading strategy on past data, you are not trading with an edge. You are guessing. Learning how to backtest a trading strategy is the single cheapest lesson in this game, because it costs you nothing but time, and it can save you thousands in losses you never needed to take.</p>
+
+<p>I backtest every idea before I risk a dollar on it. Not because I enjoy spreadsheets (though I do), but because the market does not care how confident you feel. It only cares whether your rules actually work over a large sample. Backtesting answers that question before your account does.</p>
+
+<h2>What backtesting actually means</h2>
+<p>Backtesting is simple. You take a set of rules, apply them to historical price data, and record what would have happened if you had followed those rules perfectly. Every entry, every stop, every exit. No skipping the ugly ones.</p>
+
+<p>The goal is not to prove your strategy works. The goal is to find out whether it does, honestly, before you learn the hard way. Think of it like a practice exam. You want to fail here, not on the real test.</p>
+
+<h2>How to backtest a trading strategy step by step</h2>
+<p>Here is the process I use and teach. It does not require code or expensive software. A charting platform and a spreadsheet are enough to start.</p>
+
+<ol>
+<li><strong>Write your rules down completely.</strong> Entry condition, stop loss placement, target, position size. If you cannot write it clearly enough for someone else to follow, it is not a strategy yet. It is a vibe.</li>
+<li><strong>Pick your market and timeframe.</strong> The same rules can work on one timeframe and fail on another. Test them where you actually plan to trade.</li>
+<li><strong>Scroll back at least 6 months of data.</strong> More is better. You want to see your rules in trending markets, choppy markets, and volatile drops. If you only test during a bull run, your results mean nothing.</li>
+<li><strong>Go bar by bar.</strong> On TradingView or any charting tool, use replay mode or scroll forward one candle at a time. When your entry condition appears, log the trade. Record entry price, stop, target, result.</li>
+<li><strong>Log at least 30 to 50 trades.</strong> Fewer than that and the results are noise. You need enough trades to see a pattern, not just a lucky streak.</li>
+<li><strong>Calculate your numbers.</strong> Win rate, average win, average loss, and your expectancy (the average amount you make or lose per trade). If expectancy is negative, the strategy loses money. Period.</li>
+</ol>
+
+<h2>What to look for in your results</h2>
+<p>A backtest is not about getting a high win rate. It is about the combination of win rate and reward per trade. A strategy that wins 40% of the time but makes 2x what it loses on average is profitable. A strategy that wins 70% but gives back everything on a few big losses is not. I break down that math in detail in <a href='/blog/win-rate-vs-risk-reward.html'>win rate vs risk reward</a>.</p>
+
+<p>You also want to look at the worst stretch. How many losses came back to back? Could you have survived that streak with your <a href='/blog/how-much-to-risk-per-trade.html'>risk per trade</a>? If the answer is no, the strategy might be profitable on paper but deadly in practice.</p>
+
+<h2>The mistakes that ruin a backtest</h2>
+<ul>
+<li><strong>Cherry-picking trades.</strong> If you only log the setups that worked, your backtest is a fantasy novel.</li>
+<li><strong>Ignoring fees and slippage.</strong> Real fills are not perfect. On crypto especially, factor in the spread and commission or your results will look better than reality.</li>
+<li><strong>Fitting rules to the data.</strong> If you keep adjusting your rules until the backtest looks good, you have not found an edge. You have memorized the past. That will not repeat.</li>
+<li><strong>Too few trades.</strong> Ten winning trades in a row proves nothing. You need volume. Thirty trades minimum, fifty is better.</li>
+</ul>
+
+<h2>Why this matters for prop firm traders</h2>
+<p>If you trade <a href='/prop-firm-trading.html'>prop firm accounts</a>, backtesting is not optional. You are paying a challenge fee every time you attempt an evaluation. Walking in without tested rules means you are paying to discover that your strategy does not work under drawdown limits. That is expensive tuition. A simple backtest beforehand costs nothing and tells you whether you have a real shot.</p>
+
+<h2>Manual vs automated backtesting</h2>
+<p>Manual backtesting (scrolling through charts bar by bar) is slower, but it builds screen time and forces you to see your strategy in every condition. Automated backtesting (using code or a platform like TradingView Strategy Tester) is faster and handles larger samples, but it is easy to over-optimize without understanding why the rules work.</p>
+
+<p>I recommend starting manual. Once you understand your rules deeply, automation speeds up iteration. But never automate before you understand.</p>
+
+<h2>When your backtest looks good</h2>
+<p>A positive backtest does not mean you are ready to go live with full size. The next step is forward testing, running those same rules in real-time on a demo or <a href='/blog/paper-trading.html'>paper trading</a> account for at least 2 to 4 weeks. This confirms that you can execute the rules live, under real emotions, with real-time price action. If the results hold, then you scale into real capital slowly.</p>
+
+<h2>The bottom line</h2>
+<p>Backtesting is the cheapest, most honest feedback loop in trading. It separates people who have a process from people who have a hope. If you want to <a href='/trading-for-a-living.html'>trade for a living</a>, this is where it starts. Not with a hot tip or a signal group. With your own rules, tested on your own data, before a single dollar is at risk.</p>
+          <h2>Common questions</h2>
+          <h3>How many trades do you need for a valid backtest?</h3>
+          <p>At least 30 to 50 trades. Fewer than that and your results could easily be random luck rather than a real pattern.</p>
+          <h3>Can you backtest without coding?</h3>
+          <p>Yes. A charting platform with replay mode and a simple spreadsheet is enough. Manual backtesting builds screen time and understanding before you automate.</p>
+          <h3>What is a good win rate in a backtest?</h3>
+          <p>There is no single good number. A 40 percent win rate with a 2 to 1 reward ratio is profitable. What matters is the combination of win rate and average reward versus average loss.</p>
+          <h3>How far back should you backtest?</h3>
+          <p>At least 6 months, ideally 1 to 2 years. You want to see your rules work across different market conditions, not just one favorable stretch.</p>
+          <h3>Does a profitable backtest guarantee live profits?</h3>
+          <p>No. A backtest shows that your rules worked historically. Live execution adds emotions, slippage, and real-time uncertainty. Forward testing on a demo account is the next step before risking real money.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/win-rate-vs-risk-reward.html">Win Rate vs Risk Reward: Which Matters More?</a></li>
+            <li><a href="/blog/paper-trading.html">Paper Trading: How to Practice Before Real Money</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

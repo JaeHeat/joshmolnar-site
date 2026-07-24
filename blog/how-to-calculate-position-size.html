@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Calculate Position Size in Trading | Josh Molnar</title>
+  <meta name="description" content="How to calculate position size in trading: the simple formula that keeps your dollar risk fixed every trade, with examples for crypto and futures." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/how-to-calculate-position-size.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Calculate Position Size in Trading" />
+  <meta property="og:description" content="Most traders guess their size. This is the formula that makes it math." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/how-to-calculate-position-size.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/how-to-calculate-position-size.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Calculate Position Size in Trading" />
+  <meta name="twitter:description" content="Most traders guess their size. This is the formula that makes it math." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/how-to-calculate-position-size.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Calculate Position Size in Trading",
+    "image": "https://joshmolnar.com/assets/blog/how-to-calculate-position-size.jpg",
+    "description": "How to calculate position size in trading: the simple formula that keeps your dollar risk fixed every trade, with examples for crypto and futures.",
+    "datePublished": "2026-07-24",
+    "dateModified": "2026-07-24",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/how-to-calculate-position-size.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do you calculate position size in trading?", "acceptedAnswer": {"@type": "Answer", "text": "Divide your dollar risk by your stop distance. Dollar risk is the amount you are willing to lose if the trade hits your stop, usually 1 percent of your account. Stop distance is the price gap between your entry and your stop loss."}}, {"@type": "Question", "name": "What is the position sizing formula?", "acceptedAnswer": {"@type": "Answer", "text": "Position size equals dollar risk divided by stop distance. For crypto, stop distance is a dollar amount. For futures, it is stop points multiplied by the dollar value per point for that contract."}}, {"@type": "Question", "name": "How do you calculate position size in futures trading?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply your stop distance in points by the dollar value per contract point to get the dollar distance. Then divide your dollar risk by that number to get the number of contracts to trade."}}, {"@type": "Question", "name": "Why does my position size change when I move my stop?", "acceptedAnswer": {"@type": "Answer", "text": "Because the formula keeps your dollar risk fixed. A wider stop means a larger price distance, so the formula gives you a smaller position to hold your dollar loss constant."}}, {"@type": "Question", "name": "What if the position size formula gives me less than one contract?", "acceptedAnswer": {"@type": "Answer", "text": "It means the trade does not fit your risk rules at your current account size. The right answer is to skip the trade or wait for a setup with a tighter stop that fits inside one contract."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>How to Calculate Position Size in Trading</h1>
+          <div class="meta">By Josh Molnar &middot; July 2026 &middot; 5 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/how-to-calculate-position-size.jpg" alt="Branded card explaining how to calculate position size in trading with the simple formula" />
+          </figure>
+<p>If you ask most traders how they size their positions, the honest answer is that they guess. They guess small when nervous and big when they feel confident. That feeling-based approach is what turns a normal losing streak into a blown account. The fix is a single formula, and once you understand it, sizing every trade becomes a calculation, not a gut call.</p>
+
+<h2>How to calculate position size</h2>
+<p>Position size equals your dollar risk divided by your stop distance. That is the whole formula. Two inputs, one output.</p>
+<ul>
+<li><strong>Dollar risk</strong> is the amount you are willing to lose if this trade is wrong. Most professional traders keep this at 1 percent of their account per trade.</li>
+<li><strong>Stop distance</strong> is the price gap between your entry and your stop loss, measured in dollars.</li>
+</ul>
+<p>You decide the dollar risk from your account rules. You pick the stop from the chart. The formula gives you the size. Nothing is left to feeling.</p>
+
+<h2>A plain example for crypto</h2>
+<p>Say you have a $5,000 account and you risk 1 percent per trade. That is $50 at risk. You plan to buy Bitcoin at $65,000 with a stop at $64,000. The gap between entry and stop is $1,000.</p>
+<p>Position size equals $50 divided by $1,000. The answer is 0.05 BTC.</p>
+<p>If Bitcoin drops to your stop, you lose 0.05 times $1,000. That is $50 exactly, which is 1 percent of your account. The math holds every time.</p>
+<p>Now say the market is choppy and your stop needs to go to $63,000. Your gap doubles to $2,000. Run the formula again. $50 divided by $2,000 is 0.025 BTC. Half the size, same dollar risk. This is what I tell people I mentor. A wider stop is not more dangerous when you size correctly. It just means a smaller position, which is exactly right for choppier conditions.</p>
+
+<h2>How to calculate position size in futures</h2>
+<p>Futures work the same way, with one extra step. You need to convert your stop distance from points to dollars first, because futures contracts have a fixed dollar value per point.</p>
+<p>The Micro Nasdaq futures (MNQ) are worth $2 per point. The Micro S&P 500 futures (MES) are worth $5 per point. Multiply your stop in points by that value to get the dollar distance per contract. Then divide your dollar risk by that number.</p>
+<p>Here is a quick example. You short MNQ at 15,200 with a stop at 15,250. That is 50 points. At $2 per point, one contract moves $100 from your entry to your stop. Your dollar risk is $50. Divide $50 by $100 and you get 0.5 contracts. Since you cannot trade half a contract, the answer rounds down to zero. The trade does not fit your risk rules at this account size. That is useful information. Wait for a setup with a tighter stop that fits inside one contract, or skip it entirely.</p>
+<p>Learning to trade well, and eventually <a href='/trading-for-a-living.html'>trading for a living</a>, taught me that knowing when to sit out is as important as knowing how to size in.</p>
+
+<h2>The mistake most traders make</h2>
+<p>Most traders set their position size first and then fit the stop to match. That is backwards. The stop should come from the chart, from the exact level where the trade idea is wrong. The size should follow from the formula after the stop is set.</p>
+<p>When you flip that order, you end up with a stop placed not where the trade is wrong but wherever your position size lets you afford to lose. Stops placed that way get hit constantly for no reason, and most traders blame their strategy instead of their sizing process.</p>
+<p>I go deeper on where to place stops in <a href='/blog/how-to-set-a-stop-loss.html'>how to set a stop loss</a>, and I cover the 1 percent rule that produces the dollar risk number in <a href='/blog/how-much-to-risk-per-trade.html'>how much to risk per trade</a>. Those three pieces, dollar risk, stop placement, and position size formula, form the foundation of every trade I take.</p>
+          <h2>Common questions</h2>
+          <h3>How do you calculate position size in trading?</h3>
+          <p>Divide your dollar risk by your stop distance. Dollar risk is the amount you are willing to lose if the trade hits your stop, usually 1 percent of your account. Stop distance is the price gap between your entry and your stop loss.</p>
+          <h3>What is the position sizing formula?</h3>
+          <p>Position size equals dollar risk divided by stop distance. For crypto, stop distance is a dollar amount. For futures, it is stop points multiplied by the dollar value per point for that contract.</p>
+          <h3>How do you calculate position size in futures trading?</h3>
+          <p>Multiply your stop distance in points by the dollar value per contract point to get the dollar distance. Then divide your dollar risk by that number to get the number of contracts to trade.</p>
+          <h3>Why does my position size change when I move my stop?</h3>
+          <p>Because the formula keeps your dollar risk fixed. A wider stop means a larger price distance, so the formula gives you a smaller position to hold your dollar loss constant.</p>
+          <h3>What if the position size formula gives me less than one contract?</h3>
+          <p>It means the trade does not fit your risk rules at your current account size. The right answer is to skip the trade or wait for a setup with a tighter stop that fits inside one contract.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/how-much-to-risk-per-trade.html">How Much Should You Risk Per Trade? The 1% Rule</a></li>
+            <li><a href="/blog/how-to-set-a-stop-loss.html">How to Set a Stop Loss (And Where Most Traders Go Wrong)</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

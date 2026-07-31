@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Is a Trailing Stop Loss and How It Works | Josh Molnar</title>
+  <meta name="description" content="What is a trailing stop loss? A plain explanation of how trailing stops work, when to use them, and the mistake that gets most traders stopped out early." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/what-is-a-trailing-stop-loss.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is a Trailing Stop Loss and How It Works" />
+  <meta property="og:description" content="Most traders set their trailing stop too tight. Here is how a trailing stop actually works and what that mistake costs you." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/what-is-a-trailing-stop-loss.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/what-is-a-trailing-stop-loss.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is a Trailing Stop Loss and How It Works" />
+  <meta name="twitter:description" content="Most traders set their trailing stop too tight. Here is how a trailing stop actually works and what that mistake costs you." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/what-is-a-trailing-stop-loss.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Is a Trailing Stop Loss and How It Works",
+    "image": "https://joshmolnar.com/assets/blog/what-is-a-trailing-stop-loss.jpg",
+    "description": "What is a trailing stop loss? A plain explanation of how trailing stops work, when to use them, and the mistake that gets most traders stopped out early.",
+    "datePublished": "2026-07-31",
+    "dateModified": "2026-07-31",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/what-is-a-trailing-stop-loss.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a trailing stop loss?", "acceptedAnswer": {"@type": "Answer", "text": "A trailing stop loss is a stop order that moves automatically in your favor as price advances, then holds in place when price reverses and closes the trade if price reaches that level."}}, {"@type": "Question", "name": "What is the difference between a trailing stop and a regular stop loss?", "acceptedAnswer": {"@type": "Answer", "text": "A regular stop loss stays fixed at the price you set when you enter the trade. A trailing stop moves automatically as price goes in your favor, locking in more of the gain as the trade runs without you having to move it manually."}}, {"@type": "Question", "name": "How wide should I set my trailing stop?", "acceptedAnswer": {"@type": "Answer", "text": "The trail needs to be wider than the normal back-and-forth movement of the asset at the timeframe you are trading, or routine noise will stop you out of trades that were still working fine."}}, {"@type": "Question", "name": "Can I use a trailing stop loss for day trading?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, but it works best on trades with strong momentum where you want to let a winner run. For short trades with a fixed target, a standard stop loss is usually simpler and more precise."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>What Is a Trailing Stop Loss and How It Works</h1>
+          <div class="meta">By Josh Molnar &middot; July 2026 &middot; 5 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/what-is-a-trailing-stop-loss.jpg" alt="Concept card for trailing stop loss, a risk management tool that follows price and locks in gains as a trade runs" />
+          </figure>
+<p>A trailing stop loss is a stop order that moves with you when the trade goes in your favor, but locks in place the moment price stops going your way. Instead of setting a fixed exit price when you enter, you set a distance. The stop follows the price up (for a long trade) step by step. When price reverses, the stop holds where it last was and closes the trade if price reaches it.</p>
+
+<p>That is the whole idea. Simple mechanics, with a lot of nuance underneath.</p>
+
+<h2>How a trailing stop loss works</h2>
+<p>Imagine you buy a futures contract at 100. You set a trailing stop 5 points below the current price. Your stop starts at 95.</p>
+<p>Price moves to 110. Your stop automatically moves up to 105. Price moves to 120. Your stop is now 115. Then price drops. It hits 115 and you are out of the trade.</p>
+<p>You did not have to touch anything. The stop followed the price up on its own and protected 15 points of the 20-point run. With a fixed stop, you would have had to manually move it every time price advanced, or just leave it at 95 and give back the entire gain if price reversed hard.</p>
+
+<h2>Trailing stop vs regular stop loss</h2>
+<p>A regular stop loss is fixed. You place it at a specific price when you enter and it stays there no matter what price does. If the trade runs in your favor and then reverses, you only keep the gain if you manually moved the stop while you were watching.</p>
+<p>A trailing stop does that moving for you. The tradeoff is control. A fixed stop forces you to make a deliberate decision about where to exit. A trailing stop applies a mechanical rule that does not care about context or what is happening in the market at that moment.</p>
+<p>Both are valid tools. They solve different problems.</p>
+
+<h2>When a trailing stop actually helps</h2>
+<p>Trailing stops are most useful when two things are true at the same time. First, you cannot watch the trade the whole time it is open. If you have to step away, a trailing stop at least locks in some of the gain if price runs and then reverses while you are gone.</p>
+<p>Second, you are in a strong move and want to let it run without setting a fixed ceiling on the profit. If you normally target a set level, a trailing stop lets you stay in longer when a trade is really working, while still getting you out automatically if it turns.</p>
+<p>I have used trailing stops on swing trades where I expected a multi-day move. Setting a fixed target on something with room to run for days means leaving money on the table. A trailing stop lets the market decide how far it goes while keeping me protected from a full reversal.</p>
+<p>If you are thinking about how tools like this fit into a full-time trading approach, the <a href='/trading-for-a-living.html'>trading for a living</a> page covers the bigger picture of what a sustainable process actually looks like.</p>
+
+<h2>The mistake most traders make with trailing stops</h2>
+<p>The most common mistake is setting the trail too tight. If you trail by 5 points on an asset that regularly swings 20 points during the day, you will get stopped out of good trades constantly, not because the trade was wrong, but because you gave the market less room than it normally needs to breathe.</p>
+<p>The trail distance needs to be wider than the normal back-and-forth movement of that asset at the timeframe you are trading. Otherwise you are handing the market a way to shake you out of your best trades before they finish running.</p>
+<p>The second mistake is using a trailing stop as a substitute for a strategy. A trailing stop is an exit tool. It does not tell you when to enter, which direction to trade, or how much to risk. If those answers are not clear before you place the trade, a trailing stop will not save you.</p>
+<p>Start with a clear entry and a defined risk amount, and add the trailing stop as the exit method on top of that. If you are still working through where to place your stops in the first place, the piece on <a href='/blog/how-to-set-a-stop-loss.html'>how to set a stop loss</a> covers that foundation.</p>
+
+<h2>Points-based vs percentage-based trailing stops</h2>
+<p>Most brokers and exchanges let you set a trailing stop as a fixed distance in points or as a percentage of price. Percentage-based trails are more common with stock traders. In futures and crypto day trading, a points-based trail tied to the instrument's normal daily range tends to be more practical because the dollar value of a percentage varies a lot as price moves.</p>
+<p>Neither approach is better in every situation. Test whatever setting you choose on paper before relying on it in a live trade. The mechanics look simple until you watch them play out in real-time volatility, and the first time you see a trail behave unexpectedly should not be on a real position.</p>
+          <h2>Common questions</h2>
+          <h3>What is a trailing stop loss?</h3>
+          <p>A trailing stop loss is a stop order that moves automatically in your favor as price advances, then holds in place when price reverses and closes the trade if price reaches that level.</p>
+          <h3>What is the difference between a trailing stop and a regular stop loss?</h3>
+          <p>A regular stop loss stays fixed at the price you set when you enter the trade. A trailing stop moves automatically as price goes in your favor, locking in more of the gain as the trade runs without you having to move it manually.</p>
+          <h3>How wide should I set my trailing stop?</h3>
+          <p>The trail needs to be wider than the normal back-and-forth movement of the asset at the timeframe you are trading, or routine noise will stop you out of trades that were still working fine.</p>
+          <h3>Can I use a trailing stop loss for day trading?</h3>
+          <p>Yes, but it works best on trades with strong momentum where you want to let a winner run. For short trades with a fixed target, a standard stop loss is usually simpler and more precise.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/how-to-set-a-stop-loss.html">How to Set a Stop Loss (And Where Most Traders Go Wrong)</a></li>
+            <li><a href="/blog/risk-reward-ratio-explained.html">Risk Reward Ratio Explained: Why It Beats Win Rate</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Use Moving Averages in Day Trading | Josh Molnar</title>
+  <meta name="description" content="How to use moving averages in day trading: what they actually tell you, the two ways traders use them, and the mistake that burns beginners." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/how-to-use-moving-averages.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Use Moving Averages in Day Trading" />
+  <meta property="og:description" content="A moving average tells you what already happened. Here is how to use that honestly." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/how-to-use-moving-averages.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/how-to-use-moving-averages.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Use Moving Averages in Day Trading" />
+  <meta name="twitter:description" content="A moving average tells you what already happened. Here is how to use that honestly." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/how-to-use-moving-averages.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Use Moving Averages in Day Trading",
+    "image": "https://joshmolnar.com/assets/blog/how-to-use-moving-averages.jpg",
+    "description": "How to use moving averages in day trading: what they actually tell you, the two ways traders use them, and the mistake that burns beginners.",
+    "datePublished": "2026-08-02",
+    "dateModified": "2026-08-02",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/how-to-use-moving-averages.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does a moving average tell you in trading?", "acceptedAnswer": {"@type": "Answer", "text": "A moving average shows the average price over a set number of past bars. It helps you read the current trend direction at a glance and identify levels where price might slow down or bounce."}}, {"@type": "Question", "name": "Which is better for day trading, SMA or EMA?", "acceptedAnswer": {"@type": "Answer", "text": "Most day traders prefer the EMA because it reacts faster to recent price changes and is less laggy. The SMA is smoother and more common for longer-term trend analysis, but the practical difference on the same settings is small."}}, {"@type": "Question", "name": "What is the best moving average for day trading?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single best setting, but the 9 and 21 EMA combination is widely used for short timeframes, and the 20 and 50 EMA for slightly longer ones. Pick one setup and learn how price behaves around those levels rather than constantly changing settings."}}, {"@type": "Question", "name": "Do moving average crossovers actually work?", "acceptedAnswer": {"@type": "Answer", "text": "Crossover signals are unreliable in choppy, sideways markets and often trigger late in a trend. Moving averages work better as a trend filter and context tool than as standalone buy and sell signals."}}, {"@type": "Question", "name": "How many moving averages should I have on my chart?", "acceptedAnswer": {"@type": "Answer", "text": "Two or three is plenty. More than that clutters the chart and makes every decision harder. A short-period EMA for near-term momentum and a longer one for trend direction is all most day traders need."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>How to Use Moving Averages in Day Trading</h1>
+          <div class="meta">By Josh Molnar &middot; August 2026 &middot; 5 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/how-to-use-moving-averages.jpg" alt="Branded trading card illustrating how to use moving averages in day trading" />
+          </figure>
+<p>I want to give you an honest answer to one of the most common questions new traders have. What is a moving average, and does it actually help you trade? Yes, but not in the way most people think. Let me break down how moving averages work, what they are genuinely good for, and where they fail.</p>
+
+<h2>What is a moving average?</h2>
+<p>A moving average is just an average price, calculated over a set number of past bars and updated after every new bar. On a 20-bar chart, the 20-period moving average is the average closing price of the last 20 candles. When the next candle closes, the oldest one drops off and the newest one gets added. The line moves forward with the chart. That is where the name comes from.</p>
+<p>There are two types you will see everywhere. The simple moving average (SMA) treats every bar in the window equally. The exponential moving average (EMA) puts more weight on the most recent bars, which makes it react to price changes faster. For day trading, most traders prefer the EMA because it is less laggy. For longer-term trend watching, the SMA is more common. On the same settings, the practical difference between the two is small. Do not let the choice slow you down.</p>
+
+<h2>The two things moving averages are actually useful for</h2>
+<p>Strip away the noise and moving averages have two real uses in day trading.</p>
+<p>The first is reading trend direction. If price is above a moving average and the line is sloping up, you are in an uptrend. Below and sloping down means a downtrend. I use this as a fast filter. If I want to take long trades (betting price goes up) on a short timeframe, I check a longer timeframe moving average first. If price is well below it and the line is pointing down, I skip the long and look for a short instead. One check. A few seconds.</p>
+<p>The second use is as a moving support or resistance level. In a strong uptrend, price will often pull back to touch a moving average and then bounce higher. Traders watch for this. The 20-period and 50-period EMAs are the most common levels for this kind of pullback trade. If you trade <a href='/day-trading-crypto.html'>crypto day trading</a>, you will see this behavior regularly in the trending phases of the market. The key word is trending. In a sideways range, moving averages lose this property almost entirely, and you end up chasing lines that do not mean anything in that context.</p>
+
+<h2>The most common mistake: treating a crossover as a signal</h2>
+<p>The biggest error I see beginners make is using a moving average crossover as a buy or sell signal. The setup is when a shorter moving average crosses above a longer one, you buy. When it crosses below, you sell. Every beginner trading course teaches this. The problem is that it does not work reliably in a choppy, sideways market. You end up with a string of false signals, each one costing you a small loss. The crossover only looks clean after the trend is already well underway, which means you are late most of the time.</p>
+<p>I tell everyone I mentor the same thing. A moving average shows you what already happened. It does not predict what happens next. Use it to understand context and background, not to time your entry. When I write about <a href='/blog/best-timeframe-for-day-trading.html'>choosing the right timeframe for day trading</a>, this same logic applies. Your actual setup comes from price structure. The moving average is background context, not the signal.</p>
+
+<h2>Which moving averages should you use?</h2>
+<p>Keep it simple. Most professional day traders use two or three at most. A short one for near-term momentum and a longer one for the bigger trend. Common combinations are the 9 and 21 EMA on a shorter timeframe, or the 20 and 50 EMA on a slightly longer one. The exact numbers matter less than consistency. Pick one combination, learn how price behaves around those levels on the specific markets you trade, and stick with it long enough to actually understand them. Changing your settings every week is how traders convince themselves the indicator is the problem when the real issue is their process.</p>
+
+<h2>The honest bottom line</h2>
+<p>Moving averages are useful background tools. They help you see the trend at a glance and identify zones where price might slow down, bounce, or break. They are not a trading strategy on their own. Build your actual entries and exits around price structure and sound <a href='/trading-for-a-living.html'>risk management</a> first. Then layer a moving average or two as a filter to keep you on the right side of the trend. Used that way, they earn their place on the chart.</p>
+          <h2>Common questions</h2>
+          <h3>What does a moving average tell you in trading?</h3>
+          <p>A moving average shows the average price over a set number of past bars. It helps you read the current trend direction at a glance and identify levels where price might slow down or bounce.</p>
+          <h3>Which is better for day trading, SMA or EMA?</h3>
+          <p>Most day traders prefer the EMA because it reacts faster to recent price changes and is less laggy. The SMA is smoother and more common for longer-term trend analysis, but the practical difference on the same settings is small.</p>
+          <h3>What is the best moving average for day trading?</h3>
+          <p>There is no single best setting, but the 9 and 21 EMA combination is widely used for short timeframes, and the 20 and 50 EMA for slightly longer ones. Pick one setup and learn how price behaves around those levels rather than constantly changing settings.</p>
+          <h3>Do moving average crossovers actually work?</h3>
+          <p>Crossover signals are unreliable in choppy, sideways markets and often trigger late in a trend. Moving averages work better as a trend filter and context tool than as standalone buy and sell signals.</p>
+          <h3>How many moving averages should I have on my chart?</h3>
+          <p>Two or three is plenty. More than that clutters the chart and makes every decision harder. A short-period EMA for near-term momentum and a longer one for trend direction is all most day traders need.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/best-timeframe-for-day-trading.html">Best Timeframe for Day Trading (Honest Guide)</a></li>
+            <li><a href="/blog/price-action-trading-explained.html">What Is Price Action Trading? A Simple Explanation</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

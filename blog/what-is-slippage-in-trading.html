@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Is Slippage in Trading? A Simple Guide | Josh Molnar</title>
+  <meta name="description" content="What is slippage in trading? A plain explanation of why you get a different price than expected, when it matters, and how to reduce it." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/what-is-slippage-in-trading.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is Slippage in Trading? A Simple Guide" />
+  <meta property="og:description" content="You clicked buy at one price and got filled at another. That gap has a name, and it costs you more than you think." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/what-is-slippage-in-trading.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/what-is-slippage-in-trading.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is Slippage in Trading? A Simple Guide" />
+  <meta name="twitter:description" content="You clicked buy at one price and got filled at another. That gap has a name, and it costs you more than you think." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/what-is-slippage-in-trading.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Is Slippage in Trading? A Simple Guide",
+    "image": "https://joshmolnar.com/assets/blog/what-is-slippage-in-trading.jpg",
+    "description": "What is slippage in trading? A plain explanation of why you get a different price than expected, when it matters, and how to reduce it.",
+    "datePublished": "2026-08-07",
+    "dateModified": "2026-08-07",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/what-is-slippage-in-trading.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is slippage in trading?", "acceptedAnswer": {"@type": "Answer", "text": "Slippage is the difference between the price you expected on a trade and the price you actually got. It happens because prices can move between the moment you place an order and the moment it fills."}}, {"@type": "Question", "name": "Is slippage always bad?", "acceptedAnswer": {"@type": "Answer", "text": "No. Slippage can go in your favor, meaning you get a better price than expected. But most traders notice it when it costs them money, which is more common with market orders in fast or thin markets."}}, {"@type": "Question", "name": "How do you avoid slippage?", "acceptedAnswer": {"@type": "Answer", "text": "Use limit orders instead of market orders, trade during high-volume hours, keep your order size reasonable, and avoid placing trades right on major news releases."}}, {"@type": "Question", "name": "Does slippage affect stop losses?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A stop loss becomes a market order once price hits your level, so in a fast market your actual exit can be worse than your planned stop. Plan for it, but never skip using a stop loss because of it."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>What Is Slippage in Trading? A Simple Guide</h1>
+          <div class="meta">By Josh Molnar &middot; August 2026 &middot; 5 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/what-is-slippage-in-trading.jpg" alt="What is slippage in trading, a simple guide by Josh Molnar" />
+          </figure>
+<p>Slippage is one of those words that sounds technical but describes something every trader has felt. You see a price on your screen, you click buy or sell, and when the trade goes through you got a slightly different price than the one you were looking at. That difference is slippage. It is not a bug. It is not your broker cheating you. It is how markets actually work, and once you understand it, you can stop losing money to it without even noticing.</p>
+
+<h2>What Is Slippage in Trading?</h2>
+<p>Slippage is the difference between the price you expected to get on a trade and the price you actually received. If you tried to buy Bitcoin at $80,000 and your order filled at $80,050, that $50 gap is slippage. It can happen on entries, exits, and stop losses. It can go against you (you pay more or sell for less) or in your favor (you get a better price than expected). Most of the time, though, traders notice slippage when it costs them money.</p>
+
+<h2>Why Slippage Happens</h2>
+<p>Every trade needs a buyer and a seller. When you send a market order, you are saying &ldquo;fill me right now at whatever price is available.&rdquo; Between the moment you click and the moment the exchange matches your order, the price can move. Two things make this worse.</p>
+<ul>
+<li><strong>Fast-moving markets.</strong> During big news events, earnings releases, or sudden crashes, prices jump around so quickly that the price you saw is already gone by the time your order arrives. The faster the market moves, the bigger the gap.</li>
+<li><strong>Low volume.</strong> If there are not many buyers and sellers at the price you want, your order eats through the available orders at nearby prices. Think of it like a line at a store. If the line is long (lots of volume), you get served at the listed price. If the line is empty (thin volume), you end up paying more just to get filled.</li>
+</ul>
+<p>This is why slippage tends to be worst during the opening minutes of a trading session, around major economic announcements, and in smaller or less popular markets. If you <a href='/day-trading-crypto.html'>day trade crypto</a>, you have probably noticed this firsthand. Crypto can go from busy to dead in the middle of the night, and that shift changes how much slippage you get.</p>
+
+<h2>How Slippage Affects Your Results</h2>
+<p>A little slippage on one trade is no big deal. But slippage adds up. If you take hundreds of trades and each one costs you a few dollars in slippage, that quiet leak can eat a meaningful chunk of your profits over time. It is one of those hidden costs that separates the results you see in a backtest from the results you get in real life.</p>
+<p>For <a href='/prop-firm-trading.html'>prop firm traders</a>, this matters even more. When your account has strict rules about maximum losses and daily limits, every dollar of unexpected slippage brings you closer to a rule violation. I have seen traders plan a trade perfectly and still breach their daily limit because slippage on a stop loss gave them a worse exit than they planned for.</p>
+
+<h2>How to Reduce Slippage</h2>
+<p>You cannot eliminate slippage completely, but you can shrink it. Here is what actually works.</p>
+<ul>
+<li><strong>Use limit orders instead of market orders.</strong> A market order says &ldquo;fill me now at any price.&rdquo; A limit order says &ldquo;fill me at this price or better, and if you cannot, do not fill me at all.&rdquo; Limit orders protect you from getting a bad price. The trade-off is that sometimes your order will not get filled because the price moved away before it could match. That is usually a better outcome than paying too much.</li>
+<li><strong>Trade during busy hours.</strong> The more buyers and sellers in the market, the tighter the prices and the less slippage you experience. For futures, that means the New York session. For crypto, that usually means the overlap between US and European hours. Avoid placing trades during dead overnight hours when volume dries up.</li>
+<li><strong>Watch your size.</strong> The bigger your order relative to the available volume, the more slippage you will get. If you are trading a smaller altcoin or a thin futures contract, keep your size reasonable. Slippage does not scale evenly. Doubling your size can more than double your slippage.</li>
+<li><strong>Avoid trading right on the news.</strong> The seconds around a major announcement are the worst time for slippage. Prices gap, spreads widen, and fills get ugly. Unless your entire strategy is built around those moments, sitting out the first few seconds after a big release saves real money.</li>
+</ul>
+
+<h2>Slippage on Stop Losses</h2>
+<p>This is the one that catches people off guard. Your stop loss is a promise to yourself to exit at a certain price, but a stop loss order becomes a market order once price reaches your level. That means in a fast-moving market, your actual exit can be worse than your planned stop. I factor this into my <a href='/blog/how-to-set-a-stop-loss.html'>stop loss planning</a> because pretending slippage does not exist is how you underestimate your real risk on every trade.</p>
+<p>Does this mean you should skip stop losses? Absolutely not. A stop loss with some slippage is infinitely better than no stop loss and a catastrophic loss. Just know that your worst-case scenario on any trade is slightly worse than the number on your chart.</p>
+
+<h2>The Bottom Line</h2>
+<p>Slippage is not a scam and it is not random bad luck. It is a predictable cost of doing business in the markets. The traders who last are the ones who plan for it, reduce it where they can, and build it into their expectations. If you want to take <a href='/trading-for-a-living.html'>trading seriously as a career</a>, treating slippage as a real line item, not an afterthought, is part of the job.</p>
+          <h2>Common questions</h2>
+          <h3>What is slippage in trading?</h3>
+          <p>Slippage is the difference between the price you expected on a trade and the price you actually got. It happens because prices can move between the moment you place an order and the moment it fills.</p>
+          <h3>Is slippage always bad?</h3>
+          <p>No. Slippage can go in your favor, meaning you get a better price than expected. But most traders notice it when it costs them money, which is more common with market orders in fast or thin markets.</p>
+          <h3>How do you avoid slippage?</h3>
+          <p>Use limit orders instead of market orders, trade during high-volume hours, keep your order size reasonable, and avoid placing trades right on major news releases.</p>
+          <h3>Does slippage affect stop losses?</h3>
+          <p>Yes. A stop loss becomes a market order once price hits your level, so in a fast market your actual exit can be worse than your planned stop. Plan for it, but never skip using a stop loss because of it.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/how-to-set-a-stop-loss.html">How to Set a Stop Loss (And Where Most Traders Go Wrong)</a></li>
+            <li><a href="/blog/how-to-calculate-position-size.html">How to Calculate Position Size in Trading</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

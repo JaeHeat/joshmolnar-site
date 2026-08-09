@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Is a Margin Call? How to Avoid One | Josh Molnar</title>
+  <meta name="description" content="A margin call is a warning from your broker that your account is running out of cushion. Here is exactly what triggers one and how to avoid it." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/what-is-a-margin-call.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is a Margin Call? How to Avoid One" />
+  <meta property="og:description" content="A margin call is not just a warning. It is your broker telling you they can close your trades without asking." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/what-is-a-margin-call.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/what-is-a-margin-call.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is a Margin Call? How to Avoid One" />
+  <meta name="twitter:description" content="A margin call is not just a warning. It is your broker telling you they can close your trades without asking." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/what-is-a-margin-call.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Is a Margin Call? How to Avoid One",
+    "image": "https://joshmolnar.com/assets/blog/what-is-a-margin-call.jpg",
+    "description": "A margin call is a warning from your broker that your account is running out of cushion. Here is exactly what triggers one and how to avoid it.",
+    "datePublished": "2026-08-09",
+    "dateModified": "2026-08-09",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/what-is-a-margin-call.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a margin call in simple terms?", "acceptedAnswer": {"@type": "Answer", "text": "It is a warning from your broker that your account balance has dropped below the minimum they require to keep your positions open. You must add funds or close trades, or the broker will close them for you."}}, {"@type": "Question", "name": "Can you lose more than your account balance from a margin call?", "acceptedAnswer": {"@type": "Answer", "text": "On most retail exchanges and futures brokers, your account will be liquidated before it can go negative. However, in fast-moving markets with extreme slippage, it is technically possible to end up with a small negative balance. Most brokers have protections against this, but it is worth checking the rules of your specific exchange."}}, {"@type": "Question", "name": "How long do you have to respond to a margin call?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the broker. Some give you a few hours, some give you until the end of the trading session. In crypto, some exchanges liquidate automatically with no warning period at all. Always assume time is short."}}, {"@type": "Question", "name": "Does a stop loss prevent a margin call?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, in practice. If your stop loss is set correctly and the market does not gap past it, the position closes before your loss grows large enough to trigger a margin call. A stop loss is your first line of defense."}}, {"@type": "Question", "name": "What is the difference between a margin call and liquidation?", "acceptedAnswer": {"@type": "Answer", "text": "A margin call is the warning. Liquidation is what happens if you do not act on that warning. Your broker sells your position to recover the borrowed funds, whether you are ready or not."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>What Is a Margin Call? How to Avoid One</h1>
+          <div class="meta">By Josh Molnar &middot; August 2026 &middot; 6 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/what-is-a-margin-call.jpg" alt="Chart showing margin levels and a margin call warning indicator" />
+          </figure>
+<p>A margin call is one of those phrases every trader hears early on but rarely fully understands until it happens to them. I want to fix that, because by the time a margin call hits, you are already in a bad spot. Understanding what it is before you encounter it is the only way to make sure you never actually experience one.</p>
+
+<h2>What a margin call actually means</h2>
+<p>When you trade with leverage, you are borrowing power from your broker (or exchange) to control a position larger than your account balance alone. To do that, your broker requires you to keep a minimum amount of money in your account at all times. That minimum is called the <strong>maintenance margin</strong>.</p>
+<p>A margin call happens the moment your account balance drops below that minimum. Your broker is not asking you to come back later. They are telling you right now that your account no longer has enough buffer to cover the risk of your open positions. You have to do something, immediately, or they will do it for you.</p>
+
+<h2>What actually triggers one</h2>
+<p>Three things cause a margin call:</p>
+<ul>
+<li><strong>The market moves against your position.</strong> If you are long and price falls, your unrealized loss eats into your account balance. If that loss is large enough, you cross below the maintenance margin threshold.</li>
+<li><strong>You opened too large a position to begin with.</strong> Using high leverage on a big position means even a small price move can push you below the limit.</li>
+<li><strong>Your broker raises its margin requirements.</strong> Exchanges sometimes increase the amount they require during periods of high volatility. Even a position you opened safely can suddenly trigger a margin call if the rules change mid-trade.</li>
+</ul>
+
+<h2>What happens when you get a margin call</h2>
+<p>The name &ldquo;call&rdquo; is a holdover from the days when brokers literally called you on the phone. Today it is usually a notification. But the mechanics are the same.</p>
+<p>You have two choices when it arrives. First, you can deposit more cash into your account to bring the balance back above the maintenance margin. Second, you can close some or all of your positions to reduce the amount of margin you are using.</p>
+<p>Here is the part most people do not realize: if you do neither fast enough, the broker can close your positions for you. They do not need your permission. They will liquidate whatever they need to in order to bring the account back into balance, at whatever price the market is at right then. That means you can end up locked in at the worst possible moment, with no say in the matter.</p>
+
+<h2>A simple example</h2>
+<p>Say you have 2,000 dollars in a futures account and you open a position that requires 1,800 dollars of margin to hold. You are already very close to your limit. The market moves 2 percent against you. That wipes out most of your remaining cushion and your broker sends a margin call.</p>
+<p>Now compare that to a trader who has 10,000 dollars in the same account and opens the same position. A 2 percent move barely touches their buffer. Same trade, completely different risk profile, because of account sizing and leverage.</p>
+<p>This is why <a href='/blog/what-is-leverage-in-trading.html'>understanding leverage</a> before you use it is not optional. Leverage is what creates the conditions for a margin call in the first place.</p>
+
+<h2>How to avoid a margin call entirely</h2>
+<p>The short answer is: never let your account get close to the edge. Here is what that looks like in practice:</p>
+<ul>
+<li><strong>Use less leverage than you are allowed.</strong> Just because your broker offers 20x does not mean you should use it. The higher your leverage, the smaller the move that wipes out your margin buffer.</li>
+<li><strong>Keep a cash cushion in the account.</strong> Always have more in reserve than the bare minimum required. A 30 to 50 percent buffer above your maintenance margin means the market has to make a significant move against you before you are even near trouble.</li>
+<li><strong>Use stop losses on every position.</strong> A stop loss closes your trade at a predetermined level before the loss gets out of hand. If your stop is in place and respected, a margin call should never be able to catch you off guard. The trade exits before your balance drops that far.</li>
+<li><strong>Size positions relative to your account, not your confidence.</strong> Big conviction does not change the math. Risk a small, fixed percentage of your account per trade, and your position size is always proportional to what you can actually absorb.</li>
+</ul>
+<p>If you want to think through the full picture of trading full-time and managing risk at a professional level, the <a href='/trading-for-a-living.html'>trading for a living guide</a> covers the broader framework I use.</p>
+
+<h2>Margin calls in futures vs crypto</h2>
+<p>In futures trading (products like the Nasdaq or S&amp;P 500 futures), your broker sets a specific initial margin and a maintenance margin. The numbers are standardized by the exchange, and the rules are strict.</p>
+<p>In crypto trading, the same concept applies but the thresholds and timing can vary by exchange. Some crypto exchanges liquidate positions automatically the moment your margin ratio hits a certain level, without any warning at all. That makes the crypto version even less forgiving if you are not paying attention to your buffer.</p>
+<p>In either market, the lesson is the same: a margin call is a symptom of too much risk for too little account size. The fix is not to react faster. The fix is to never put yourself in a position where one market move can trigger one.</p>
+          <h2>Common questions</h2>
+          <h3>What is a margin call in simple terms?</h3>
+          <p>It is a warning from your broker that your account balance has dropped below the minimum they require to keep your positions open. You must add funds or close trades, or the broker will close them for you.</p>
+          <h3>Can you lose more than your account balance from a margin call?</h3>
+          <p>On most retail exchanges and futures brokers, your account will be liquidated before it can go negative. However, in fast-moving markets with extreme slippage, it is technically possible to end up with a small negative balance. Most brokers have protections against this, but it is worth checking the rules of your specific exchange.</p>
+          <h3>How long do you have to respond to a margin call?</h3>
+          <p>It depends on the broker. Some give you a few hours, some give you until the end of the trading session. In crypto, some exchanges liquidate automatically with no warning period at all. Always assume time is short.</p>
+          <h3>Does a stop loss prevent a margin call?</h3>
+          <p>Yes, in practice. If your stop loss is set correctly and the market does not gap past it, the position closes before your loss grows large enough to trigger a margin call. A stop loss is your first line of defense.</p>
+          <h3>What is the difference between a margin call and liquidation?</h3>
+          <p>A margin call is the warning. Liquidation is what happens if you do not act on that warning. Your broker sells your position to recover the borrowed funds, whether you are ready or not.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/what-is-leverage-in-trading.html">What Is Leverage in Trading? A Simple Explanation</a></li>
+            <li><a href="/blog/how-much-to-risk-per-trade.html">How Much Should You Risk Per Trade? The 1% Rule</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

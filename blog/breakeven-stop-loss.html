@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Breakeven Stop Loss: When to Move It | Josh Molnar</title>
+  <meta name="description" content="What a breakeven stop loss is, when to move your stop to breakeven, and when doing it too early quietly kills your winners." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/breakeven-stop-loss.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Breakeven Stop Loss: When to Move It" />
+  <meta property="og:description" content="Moving your stop to breakeven feels safe. Sometimes it is the most expensive thing you do all day." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/breakeven-stop-loss.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/breakeven-stop-loss.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Breakeven Stop Loss: When to Move It" />
+  <meta name="twitter:description" content="Moving your stop to breakeven feels safe. Sometimes it is the most expensive thing you do all day." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/breakeven-stop-loss.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Breakeven Stop Loss: When to Move It",
+    "image": "https://joshmolnar.com/assets/blog/breakeven-stop-loss.jpg",
+    "description": "What a breakeven stop loss is, when to move your stop to breakeven, and when doing it too early quietly kills your winners.",
+    "datePublished": "2026-08-11",
+    "dateModified": "2026-08-11",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/breakeven-stop-loss.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a breakeven stop loss?", "acceptedAnswer": {"@type": "Answer", "text": "It means moving your stop loss to your entry price after a trade moves in your favor, so that if price reverses you exit at zero profit and zero loss instead of taking a full loss."}}, {"@type": "Question", "name": "When should I move my stop to breakeven?", "acceptedAnswer": {"@type": "Answer", "text": "After the trade has moved a meaningful distance in your favor, usually at least 1 times your original risk. Moving too early lets normal market noise stop you out of trades that would have been winners."}}, {"@type": "Question", "name": "Does moving to breakeven reduce your win rate?", "acceptedAnswer": {"@type": "Answer", "text": "Not directly. It reduces the number of trades that reach their full target by stopping some out early at zero. The net effect is smaller average winners, which can quietly turn a profitable strategy into a losing one."}}, {"@type": "Question", "name": "Should I always move to breakeven on a prop firm account?", "acceptedAnswer": {"@type": "Answer", "text": "Not always, but when you are near a daily or overall loss limit it can make sense as a defensive play. The trade-off is fewer full winners in exchange for protecting your account from a breach."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>Breakeven Stop Loss: When to Move It</h1>
+          <div class="meta">By Josh Molnar &middot; August 2026 &middot; 6 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/breakeven-stop-loss.jpg" alt="Branded card for breakeven stop loss article by Josh Molnar on joshmolnar.com" />
+          </figure>
+<p>A breakeven stop loss is one of those ideas that sounds like pure common sense. You enter a trade, it moves in your favor, so you slide your stop up to your entry price. Now the trade is &ldquo;risk free.&rdquo; If it comes back and hits you, you lose nothing. Feels smart, right?</p>
+<p>Sometimes it is. But I have watched this one habit quietly destroy more winning strategies than almost any other mistake, including my own early on. The problem is not the breakeven stop loss itself. The problem is <em>when</em> you move it. Let me walk through when it actually helps, when it hurts, and how I think about it now.</p>
+
+<h2>What a breakeven stop loss actually means</h2>
+<p>A breakeven stop loss means moving your stop loss order from its original placement up (or down, on a short) to your entry price after a trade moves in your favor. If price reverses and hits that level, you exit the trade at zero profit, zero loss. The original risk you accepted when you entered the trade disappears.</p>
+<p>On paper this looks like free money. You removed risk and kept upside. In practice, it depends entirely on timing.</p>
+
+<h2>Why traders love it (and why that is the problem)</h2>
+<p>The reason everyone gravitates toward moving to breakeven is emotional, not mathematical. Losses feel roughly twice as painful as equivalent wins feel good. So when a trade goes green, there is an almost physical urge to lock in that safety. The breakeven move scratches that itch perfectly.</p>
+<p>But markets do not move in straight lines. They push forward, pull back, push forward again. If you move your stop to entry the moment you are a few ticks in the green, normal market noise will tag that stop and kick you out of what would have been a full winner.</p>
+<p>Do this enough times and a strategy that makes money on paper starts breaking even or losing in practice. Your winners shrink, your flat trades multiply, and your account slowly bleeds. Each individual trade &ldquo;only&rdquo; cost you zero. Zero feels fine. But zero, repeated fifty times where a win should have been, is devastating.</p>
+
+<h2>When moving to breakeven actually makes sense</h2>
+<p>I am not saying never do it. I move my stop to breakeven regularly. The difference is <em>when</em>. Here is the framework I use and teach to people I mentor.</p>
+<ul>
+<li><strong>After the trade has moved a meaningful distance.</strong> For me, that usually means price has already reached my first target or at least covered about 1 times my original risk in profit. At that point the trade has proven itself. Moving to breakeven now protects real progress, not just a flicker of green.</li>
+<li><strong>When the market structure supports it.</strong> If price has broken through a clear level and that level is now between your entry and the current price, moving your stop to entry makes structural sense. The market itself has given you a reason, not just your nerves.</li>
+<li><strong>On a <a href='/prop-firm-trading.html'>funded prop firm account</a> near a loss limit.</strong> If you are close to a daily or overall loss limit, protecting capital becomes the priority. Moving to breakeven early is a defensive play that can keep your account alive for another day. It costs you some winners, but losing the account costs you everything.</li>
+</ul>
+
+<h2>When it quietly kills your results</h2>
+<p>The damage happens when you move to breakeven for comfort instead of for a reason. The classic patterns look like this.</p>
+<ul>
+<li>You enter a trade, it goes a few ticks green, and you immediately slide the stop to entry. Normal noise hits the stop. Price then runs to where your target was.</li>
+<li>You have been on a losing streak and now you are &ldquo;protecting&rdquo; every trade by moving to breakeven instantly. Your losing streak becomes a breakeven streak because your winners are all getting clipped before they pay off.</li>
+<li>You move to breakeven on every single trade as a blanket rule, regardless of how far the trade has traveled. A rigid &ldquo;always move to breakeven&rdquo; rule applied too early will reliably turn a winning strategy into a losing one.</li>
+</ul>
+<p>I have tested this. When I backtest strategies with a breakeven rule that triggers after only a small move, the win rate stays similar but the average winner drops significantly. The strategy that was profitable on paper quietly dies. If you want to understand why that matters, read how <a href='/blog/win-rate-vs-risk-reward.html'>win rate and risk reward interact</a>.</p>
+
+<h2>How to figure out your own rule</h2>
+<p>There is no single right answer. Different strategies need different rules. But here is a simple process that works for any setup.</p>
+<ol>
+<li><strong>Look at your trade data.</strong> If you keep a <a href='/blog/how-to-keep-a-trading-journal.html'>trading journal</a>, go through your last fifty or a hundred trades. Find the ones where you moved to breakeven and got stopped out flat. How many of those went on to hit the original target after you were out?</li>
+<li><strong>Test a threshold.</strong> Instead of moving to breakeven immediately, try waiting until the trade has moved 1 times your risk in your favor. Then test 1.5 times. Look at what happens to your overall results.</li>
+<li><strong>Decide based on the numbers, not the feeling.</strong> If moving to breakeven after 1 times your risk improves your results, use that. If it hurts them, do not do it just because it feels safe. Your job is to <a href='/trading-for-a-living.html'>trade for a living</a>, not to feel comfortable.</li>
+</ol>
+
+<h2>The bottom line</h2>
+<p>A breakeven stop loss is a tool, not a security blanket. Used at the right time, after the trade has earned it, it protects real profits and keeps you in the game. Used too early, because you are nervous, it clips your winners and turns a good strategy into a mediocre one. The difference is always the same. Is the market giving you a reason to move your stop, or is your fear giving you a reason? Answer that honestly every time and you will get this right far more often than not.</p>
+          <h2>Common questions</h2>
+          <h3>What is a breakeven stop loss?</h3>
+          <p>It means moving your stop loss to your entry price after a trade moves in your favor, so that if price reverses you exit at zero profit and zero loss instead of taking a full loss.</p>
+          <h3>When should I move my stop to breakeven?</h3>
+          <p>After the trade has moved a meaningful distance in your favor, usually at least 1 times your original risk. Moving too early lets normal market noise stop you out of trades that would have been winners.</p>
+          <h3>Does moving to breakeven reduce your win rate?</h3>
+          <p>Not directly. It reduces the number of trades that reach their full target by stopping some out early at zero. The net effect is smaller average winners, which can quietly turn a profitable strategy into a losing one.</p>
+          <h3>Should I always move to breakeven on a prop firm account?</h3>
+          <p>Not always, but when you are near a daily or overall loss limit it can make sense as a defensive play. The trade-off is fewer full winners in exchange for protecting your account from a breach.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/win-rate-vs-risk-reward.html">Win Rate vs Risk Reward: Which Matters More?</a></li>
+            <li><a href="/blog/how-to-keep-a-trading-journal.html">How to Keep a Trading Journal (And What to Actually Write)</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Is VWAP in Trading? How Day Traders Use It | Josh Molnar</title>
+  <meta name="description" content="VWAP stands for Volume Weighted Average Price. Here is what it means, why institutions track it, and how day traders actually use it every morning." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/what-is-vwap-in-trading.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is VWAP in Trading? How Day Traders Use It" />
+  <meta property="og:description" content="Most traders can spot VWAP on a chart. Far fewer know how to actually use it." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/what-is-vwap-in-trading.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/what-is-vwap-in-trading.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is VWAP in Trading? How Day Traders Use It" />
+  <meta name="twitter:description" content="Most traders can spot VWAP on a chart. Far fewer know how to actually use it." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/what-is-vwap-in-trading.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Is VWAP in Trading? How Day Traders Use It",
+    "image": "https://joshmolnar.com/assets/blog/what-is-vwap-in-trading.jpg",
+    "description": "VWAP stands for Volume Weighted Average Price. Here is what it means, why institutions track it, and how day traders actually use it every morning.",
+    "datePublished": "2026-08-15",
+    "dateModified": "2026-08-15",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/what-is-vwap-in-trading.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does VWAP stand for in trading?", "acceptedAnswer": {"@type": "Answer", "text": "VWAP stands for Volume Weighted Average Price. It is the average price at which an asset has traded during the session, calculated so that larger trades carry more weight than smaller ones."}}, {"@type": "Question", "name": "How do day traders use VWAP?", "acceptedAnswer": {"@type": "Answer", "text": "Most day traders use VWAP as a trend filter and as a reference level for entries. When price is above VWAP, the day has a bullish lean. A pullback to VWAP in a rising market can offer a cleaner entry than chasing a big move."}}, {"@type": "Question", "name": "Does VWAP work for crypto trading?", "acceptedAnswer": {"@type": "Answer", "text": "VWAP is available on most crypto platforms, but it is less reliable because crypto has no official market open. Platforms typically reset it at midnight UTC, which gives it less institutional significance than in equity or futures markets."}}, {"@type": "Question", "name": "What is the difference between VWAP and a moving average?", "acceptedAnswer": {"@type": "Answer", "text": "A moving average averages price over a set number of past candles and ignores volume entirely. VWAP weights each price by how much volume traded at that level during the current session, making it a stronger reference for where institutional traders have been active."}}, {"@type": "Question", "name": "When is VWAP most useful during the trading day?", "acceptedAnswer": {"@type": "Answer", "text": "VWAP is most useful in the first two hours of the session, when volume is highest and the indicator responds quickly to price action. By the afternoon it drifts slowly and offers fewer clean setups."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>What Is VWAP in Trading? How Day Traders Use It</h1>
+          <div class="meta">By Josh Molnar &middot; August 2026 &middot; 5 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/what-is-vwap-in-trading.jpg" alt="Branded trading card illustrating VWAP and volume weighted average price for day traders" />
+          </figure>
+<p>If you have spent any time looking at a day trading chart, you have probably seen a line running through price that resets every morning. That line is usually VWAP. Most traders can spot it. Far fewer know how to actually use it. Here is the plain explanation.</p>
+
+<h2>What VWAP means</h2>
+<p>VWAP stands for Volume Weighted Average Price. That sounds technical, but the idea is simple. Imagine two trades happen in a market. One trade is for 100 contracts at 50 dollars. Another is for 1,000 contracts at 52 dollars. The simple average would be 51 dollars. But the volume-weighted average would land much closer to 52, because the bigger trade pulls the number toward it.</p>
+<p>VWAP does exactly this for every single transaction during the day. It multiplies the price of each trade by the number of contracts or shares in that trade, adds all of those up, then divides by the total volume traded. The result is the average price at which the asset has actually changed hands, with bigger trades carrying more weight. It resets at the start of each trading session.</p>
+
+<h2>Why big institutions track it</h2>
+<p>Institutional traders use VWAP as a measuring stick for their own performance. A fund manager who needs to buy a large block of shares without moving the market too much will often spread the order out across the day, aiming to buy near or below VWAP. If their average fill lands below VWAP, they did well. If it is above, they paid more than the day&rsquo;s average price.</p>
+<p>This matters to you as a day trader because institutional orders are enormous. When a large buyer shows up consistently near VWAP, that is a real reason price might hold there. You are watching where the biggest players are likely to act, not just drawing a line on a chart.</p>
+
+<h2>How day traders actually use VWAP</h2>
+<p>There are two main ways retail day traders put VWAP to work.</p>
+<ul>
+<li><strong>Trend filter.</strong> When price is above VWAP, the average person who bought today is sitting on a profit. The day has a bullish lean. When price is below VWAP, the average buyer is underwater. The lean is bearish. I use this as a quick context check at the start of my trading day, not as a signal on its own.</li>
+<li><strong>Reference level for entries.</strong> Price tends to react near VWAP, especially during the first couple of hours of the session when volume is highest. A pullback to VWAP in an uptrend can offer a cleaner entry than chasing price after a big move. A failed bounce off VWAP from below can signal that buyers do not have enough strength to push through.</li>
+</ul>
+<p>The word to keep in mind is <em>tend</em>. VWAP is not a guaranteed bounce or reversal line. It is a reference level where decisions concentrate, because so many traders and institutions are watching the same thing at the same time.</p>
+
+<h2>Session timing and VWAP</h2>
+<p>VWAP is most useful in the first two hours of the trading session, when volume is high and the line is most sensitive to fresh price action. By mid-afternoon it has absorbed a full day of trades and barely moves. The signal quality drops. I do most of my VWAP-watching during the New York open window, which also happens to be when the sharpest price moves tend to occur. For more on this, see <a href='/blog/best-time-of-day-to-trade.html'>the best time of day to trade</a>.</p>
+<p>For <a href='/day-trading-crypto.html'>crypto day trading</a>, VWAP is available on most platforms but carries a different meaning. Crypto has no official market open or close, so platforms typically reset VWAP at midnight UTC. Without an exchange open to anchor the calculation, the line does not carry the same institutional weight it does in equity or futures markets. It is still a useful reference, just interpret it more loosely than you would on a futures contract like NQ or ES.</p>
+
+<h2>What VWAP cannot do</h2>
+<p>VWAP is not a buy or sell signal on its own. A price touching VWAP is not a reason to enter a trade. Plenty of traders build entire systems around that single idea and lose steadily. The level only becomes interesting when other things line up at the same spot, such as a clear market structure, a high-volume reaction, the right time of day, and your other setup conditions. VWAP narrows the field. It does not make the decision for you.</p>
+<p>It also tells you nothing about where price will go next. VWAP describes what has already happened today, not what comes next. Use it the way you would use any reference line. It tells you where price has been, not where it is going. For a look at how another popular indicator fits into a day trading process, <a href='/blog/how-to-use-moving-averages.html'>how to use moving averages</a> covers similar ground.</p>
+
+<h2>Getting started with VWAP</h2>
+<p>VWAP is built into almost every charting platform at no cost. TradingView, NinjaTrader, and most broker platforms include it as a standard indicator with nothing to configure beyond adding it to your chart. If you are new to it, spend two or three weeks watching how price reacts at the level before placing any trade based on it. Watching first is how I approach every new tool I add to my process. It is slower than jumping straight in, and it is why the tools I do trade tend to actually work.</p>
+          <h2>Common questions</h2>
+          <h3>What does VWAP stand for in trading?</h3>
+          <p>VWAP stands for Volume Weighted Average Price. It is the average price at which an asset has traded during the session, calculated so that larger trades carry more weight than smaller ones.</p>
+          <h3>How do day traders use VWAP?</h3>
+          <p>Most day traders use VWAP as a trend filter and as a reference level for entries. When price is above VWAP, the day has a bullish lean. A pullback to VWAP in a rising market can offer a cleaner entry than chasing a big move.</p>
+          <h3>Does VWAP work for crypto trading?</h3>
+          <p>VWAP is available on most crypto platforms, but it is less reliable because crypto has no official market open. Platforms typically reset it at midnight UTC, which gives it less institutional significance than in equity or futures markets.</p>
+          <h3>What is the difference between VWAP and a moving average?</h3>
+          <p>A moving average averages price over a set number of past candles and ignores volume entirely. VWAP weights each price by how much volume traded at that level during the current session, making it a stronger reference for where institutional traders have been active.</p>
+          <h3>When is VWAP most useful during the trading day?</h3>
+          <p>VWAP is most useful in the first two hours of the session, when volume is highest and the indicator responds quickly to price action. By the afternoon it drifts slowly and offers fewer clean setups.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/best-time-of-day-to-trade.html">Best Time of Day to Trade (When Markets Actually Move)</a></li>
+            <li><a href="/blog/how-to-use-moving-averages.html">How to Use Moving Averages in Day Trading</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Is ATR in Trading? How Traders Use It | Josh Molnar</title>
+  <meta name="description" content="ATR (Average True Range) measures how much a market moves. Here is how traders use it to set stops, size positions, and read volatility." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/what-is-atr-in-trading.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is ATR in Trading? How Traders Use It" />
+  <meta property="og:description" content="Most traders know the name ATR. Far fewer know what to actually do with it." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/what-is-atr-in-trading.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/what-is-atr-in-trading.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is ATR in Trading? How Traders Use It" />
+  <meta name="twitter:description" content="Most traders know the name ATR. Far fewer know what to actually do with it." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/what-is-atr-in-trading.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Is ATR in Trading? How Traders Use It",
+    "image": "https://joshmolnar.com/assets/blog/what-is-atr-in-trading.jpg",
+    "description": "ATR (Average True Range) measures how much a market moves. Here is how traders use it to set stops, size positions, and read volatility.",
+    "datePublished": "2026-08-20",
+    "dateModified": "2026-08-20",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/what-is-atr-in-trading.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does ATR mean in trading?", "acceptedAnswer": {"@type": "Answer", "text": "ATR stands for Average True Range. It is an indicator that measures how much a market has been moving on average over a set number of candles. It tells you about volatility, not direction."}}, {"@type": "Question", "name": "What is a good ATR value?", "acceptedAnswer": {"@type": "Answer", "text": "There is no single good value. ATR is meaningful relative to the asset and timeframe you are trading. A higher ATR means more movement per candle, a lower ATR means less. What matters is how the current reading compares to recent history for that same instrument."}}, {"@type": "Question", "name": "How do I use ATR for stop loss placement?", "acceptedAnswer": {"@type": "Answer", "text": "A common method is to place your stop 1 to 2 ATRs away from your entry. This keeps the stop beyond the normal noise of the market while keeping your risk proportional to current volatility."}}, {"@type": "Question", "name": "What period should I set for ATR?", "acceptedAnswer": {"@type": "Answer", "text": "The default of 14 periods works for most traders and timeframes. Lower values react faster to recent volatility, higher values give a smoother reading. Stick with 14 until you have a specific reason to change it."}}, {"@type": "Question", "name": "Does ATR tell you which direction to trade?", "acceptedAnswer": {"@type": "Answer", "text": "No. ATR only measures how much a market is moving, not which way. It can expand during a crash just as easily as a rally. Use it as a volatility tool alongside your actual strategy, not as a buy or sell signal."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>What Is ATR in Trading? How Traders Use It</h1>
+          <div class="meta">By Josh Molnar &middot; August 2026 &middot; 7 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/what-is-atr-in-trading.jpg" alt="Chart showing the ATR Average True Range indicator below a price chart, illustrating volatility measurement in trading" />
+          </figure>
+<p>When I first started looking at trading charts, I kept seeing the same indicator name pop up in every forum, every strategy breakdown, every risk management conversation: ATR. Average True Range. People would say things like &ldquo;put your stop two ATRs below entry&rdquo; or &ldquo;the ATR is expanding, this move has legs.&rdquo; I had no idea what they were talking about. So here is the plain version I wish someone had given me.</p>
+
+<h2>What is ATR (Average True Range)?</h2>
+<p>ATR is an indicator that tells you how much a market has been moving, on average, over a set number of candles. That is it. It does not tell you which direction price is going. It does not give you a buy or sell signal. It just measures <em>how big</em> recent price moves have been.</p>
+<p>The indicator was created by a trader named Welles Wilder and introduced in his 1978 book <em>New Concepts in Technical Trading Systems</em>. The default setting on most charting platforms is 14 periods, meaning it looks at the last 14 candles and gives you an average of the range across all of them.</p>
+<p>The number you see on your chart is expressed in price terms. If the ATR on a daily Bitcoin chart reads 2,500, that means Bitcoin has been moving roughly $2,500 from its low to its high each day on average. If you are on a 1-hour chart of the Nasdaq futures and ATR reads 50 points, that is how much NQ has typically moved in a single hour.</p>
+
+<h2>How ATR is calculated (simple version)</h2>
+<p>You do not need to calculate ATR by hand. Your platform does it automatically. But understanding the logic helps you use it correctly.</p>
+<p>For each candle, the indicator figures out the &ldquo;true range.&rdquo; That is the biggest of three distances:</p>
+<ul>
+<li>The distance from the current candle&rsquo;s high to its low</li>
+<li>The distance from the previous candle&rsquo;s close to the current candle&rsquo;s high</li>
+<li>The distance from the previous candle&rsquo;s close to the current candle&rsquo;s low</li>
+</ul>
+<p>The second and third measurements exist to catch gaps. If the market closes at 100 and opens the next candle at 110, the true range needs to include that jump even though it did not happen on a candle you can see. Once you have the true range for each candle, ATR averages those values across the last 14 candles (or whatever period you set).</p>
+<p>A higher ATR means the market is moving more. A lower ATR means the market has been quieter. That is the whole thing.</p>
+
+<h2>How traders actually use ATR</h2>
+<p>Here are the three places I use ATR every day in my own trading. I also cover these concepts in more depth on my <a href='/trading-for-a-living.html'>trading for a living</a> page.</p>
+
+<h2>1. Setting stop losses</h2>
+<p>This is the most common use, and for good reason. If you place a stop loss too close to your entry, the normal noise of the market will knock you out before the trade even has a chance to develop. If you place it too far, you are taking on more risk than the setup warrants.</p>
+<p>ATR gives you a data-driven way to set the stop at a distance that reflects what the market actually does. A common approach is to place your stop 1 to 2 ATRs away from your entry. On a quiet day with a low ATR, that means a tighter stop. On a volatile day with a high ATR, it means more room. The stop adjusts to current conditions automatically.</p>
+<p>What I tell people I mentor is this: if your stop is less than half an ATR from your entry, you are probably going to get stopped out by noise before the move starts. That is not a trade problem, it is a stop placement problem.</p>
+
+<h2>2. Sizing positions based on volatility</h2>
+<p>Once you know where your stop is in ATR terms, you can connect it directly to your position sizing. If you always risk the same dollar amount per trade (say 1% of your account, as I explain in my post on <a href='/blog/how-much-to-risk-per-trade.html'>how much to risk per trade</a>), ATR tells you how many contracts or units to buy.</p>
+<p>The formula is straightforward:</p>
+<ol>
+<li>Figure out your dollar risk per trade (for example, $200 on a $20,000 account at 1%)</li>
+<li>Find the ATR value in dollar terms for your instrument</li>
+<li>Divide your dollar risk by the ATR-based stop distance</li>
+</ol>
+<p>This means you automatically trade smaller when the market is volatile and larger when it is calm. That is what professional traders mean when they talk about volatility-adjusted position sizing. You are not just guessing how big to trade, you are letting the market tell you.</p>
+
+<h2>3. Reading whether a move has energy behind it</h2>
+<p>ATR can also tell you whether a current move is unusual or just normal activity. If price breaks a key level and simultaneously ATR starts rising, that tells you the move is expanding. More participants are showing up and the range is getting bigger. That is often a sign the move has some momentum behind it.</p>
+<p>On the flip side, if price is trending but ATR is shrinking, the moves are getting smaller and smaller. The trend might be running out of steam. I do not trade ATR as a buy or sell signal on its own, but I pay attention when it diverges from what price is doing.</p>
+
+<h2>What ATR does not tell you</h2>
+<p>ATR is purely a volatility measurement. It does not tell you direction. It does not tell you whether to buy or sell. It does not predict the next move. Beginners sometimes misread a rising ATR as a bullish signal. That is wrong. ATR can expand during a crash just as easily as during a rally. The number just tells you the moves are getting bigger, not which way they are going.</p>
+<p>Use ATR as a measuring tool that sits alongside your actual trading strategy, not as a strategy by itself.</p>
+
+<h2>Which ATR period should you use?</h2>
+<p>The default of 14 periods works well for most situations and is what I use. If you want a more responsive reading that reacts faster to recent volatility, you can lower it to something like 7 or 10. If you want a smoother, slower-reacting number, raise it to 20 or more. For day trading on a 5-minute or 15-minute chart, I generally keep the default at 14. For a daily chart I also keep it at 14. Changing the period too often is a form of tinkering that rarely improves results.</p>
+
+<h2>ATR on different timeframes</h2>
+<p>Remember that ATR is always measured in the units of the timeframe you are on. The ATR on a 1-hour chart reflects 1-hour candle ranges. The ATR on a daily chart reflects daily ranges. They will give you completely different numbers for the same asset. Make sure you are using the ATR from the same timeframe as your trade, or you will be sizing stops and positions incorrectly.</p>
+          <h2>Common questions</h2>
+          <h3>What does ATR mean in trading?</h3>
+          <p>ATR stands for Average True Range. It is an indicator that measures how much a market has been moving on average over a set number of candles. It tells you about volatility, not direction.</p>
+          <h3>What is a good ATR value?</h3>
+          <p>There is no single good value. ATR is meaningful relative to the asset and timeframe you are trading. A higher ATR means more movement per candle, a lower ATR means less. What matters is how the current reading compares to recent history for that same instrument.</p>
+          <h3>How do I use ATR for stop loss placement?</h3>
+          <p>A common method is to place your stop 1 to 2 ATRs away from your entry. This keeps the stop beyond the normal noise of the market while keeping your risk proportional to current volatility.</p>
+          <h3>What period should I set for ATR?</h3>
+          <p>The default of 14 periods works for most traders and timeframes. Lower values react faster to recent volatility, higher values give a smoother reading. Stick with 14 until you have a specific reason to change it.</p>
+          <h3>Does ATR tell you which direction to trade?</h3>
+          <p>No. ATR only measures how much a market is moving, not which way. It can expand during a crash just as easily as a rally. Use it as a volatility tool alongside your actual strategy, not as a buy or sell signal.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/how-much-to-risk-per-trade.html">How Much Should You Risk Per Trade? The 1% Rule</a></li>
+            <li><a href="/blog/how-to-set-a-stop-loss.html">How to Set a Stop Loss (And Where Most Traders Go Wrong)</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

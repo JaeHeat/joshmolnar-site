@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Is Trading Expectancy? How to Prove Your Edge | Josh Molnar</title>
+  <meta name="description" content="Trading expectancy is the formula that tells you if your strategy has an edge. Learn how to calculate it and what the number means." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/what-is-trading-expectancy.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is Trading Expectancy? How to Prove Your Edge" />
+  <meta property="og:description" content="If you do not know your trading expectancy, you do not know if you have an edge. Here is the formula that tells you the truth." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/what-is-trading-expectancy.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/what-is-trading-expectancy.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is Trading Expectancy? How to Prove Your Edge" />
+  <meta name="twitter:description" content="If you do not know your trading expectancy, you do not know if you have an edge. Here is the formula that tells you the truth." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/what-is-trading-expectancy.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Is Trading Expectancy? How to Prove Your Edge",
+    "image": "https://joshmolnar.com/assets/blog/what-is-trading-expectancy.jpg",
+    "description": "Trading expectancy is the formula that tells you if your strategy has an edge. Learn how to calculate it and what the number means.",
+    "datePublished": "2026-09-03",
+    "dateModified": "2026-09-03",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/what-is-trading-expectancy.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is trading expectancy?", "acceptedAnswer": {"@type": "Answer", "text": "Trading expectancy is the average amount you make or lose per trade across a large sample. It is calculated by multiplying your win rate by your average win, then subtracting your loss rate multiplied by your average loss. A positive result means your strategy has an edge."}}, {"@type": "Question", "name": "What is a good trading expectancy?", "acceptedAnswer": {"@type": "Answer", "text": "Any positive number means your strategy makes money on average. The higher the expectancy relative to your average risk per trade, the stronger the edge. Negative expectancy means the strategy loses money over time regardless of how it feels in the short run."}}, {"@type": "Question", "name": "How do I calculate trading expectancy from my journal?", "acceptedAnswer": {"@type": "Answer", "text": "From your trade history, find your win rate, your average winning trade size, your loss rate, and your average losing trade size. Then use this formula: (Win rate times Average win) minus (Loss rate times Average loss). You need at least 100 trades for the number to be reliable."}}, {"@type": "Question", "name": "Can a high win rate strategy still have negative expectancy?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If your average loss is much larger than your average win, a high win rate can still produce a losing strategy. That is why expectancy is more honest than win rate alone."}}, {"@type": "Question", "name": "How often should I recalculate my trading expectancy?", "acceptedAnswer": {"@type": "Answer", "text": "Every few months, or any time you change your strategy or notice a shift in your results. Expectancy can drift as markets change, so it is an ongoing measurement, not a one-time calculation."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>What Is Trading Expectancy? How to Prove Your Edge</h1>
+          <div class="meta">By Josh Molnar &middot; September 2026 &middot; 5 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/what-is-trading-expectancy.jpg" alt="Branded card showing the trading expectancy formula for measuring edge" />
+          </figure>
+<p>Most traders spend years focused on their win rate. They want to know what percentage of their trades are winners, and they track it obsessively. But win rate alone tells you almost nothing about whether your strategy actually makes money. The number that actually answers that question is trading expectancy.</p>
+
+<p>I tell everyone I mentor to calculate this before they risk real money. It is the single clearest proof of whether a strategy has an edge or not.</p>
+
+<h2>What is trading expectancy?</h2>
+<p>Trading expectancy is the average amount you can expect to make or lose per trade, measured across a large sample of trades. It is a single number that tells you whether your strategy puts money in your pocket or takes it out over time. If your expectancy is positive, your strategy makes money in the long run. If it is negative, you are bleeding out slowly no matter how good any individual week feels.</p>
+
+<h2>The trading expectancy formula</h2>
+<p>The formula has two parts. The first part is your wins: multiply your win rate by your average winning trade size. The second part is your losses: multiply your loss rate by your average losing trade size. Then subtract the second from the first.</p>
+<ul>
+<li>Expectancy = (Win rate &times; Average win) - (Loss rate &times; Average loss)</li>
+</ul>
+<p>That is it. No complicated math. Just four numbers pulled from your trading history.</p>
+
+<h2>A worked example that shows why win rate is not enough</h2>
+<p>Say you have tracked 100 trades. Forty were winners and sixty were losers. Your average winner made $150 and your average loser cost $75. Here is the math:</p>
+<ul>
+<li>Winning side: 40% &times; $150 = $60</li>
+<li>Losing side: 60% &times; $75 = $45</li>
+<li>Expectancy: $60 - $45 = <strong>+$15 per trade</strong></li>
+</ul>
+<p>That strategy makes $15 on average every time you enter a trade. Over 100 trades that is $1,500 in expected profit. That is a real edge.</p>
+
+<p>Now flip the numbers. Same 100 trades, but this time you win 60 percent of them. Sounds much better. Except your average winner is only $50 and your average loser is $100. The math:</p>
+<ul>
+<li>Winning side: 60% &times; $50 = $30</li>
+<li>Losing side: 40% &times; $100 = $40</li>
+<li>Expectancy: $30 - $40 = <strong>-$10 per trade</strong></li>
+</ul>
+<p>A 60 percent win rate and you are still losing money on every trade on average. This is exactly why win rate alone is a trap. A strategy can feel like it is working because most trades close green, while expectancy quietly proves the account is draining. As I explain in detail in <a href='/blog/win-rate-vs-risk-reward.html'>win rate vs risk reward</a>, the ratio of your wins to your losses matters far more than how often you win.</p>
+
+<h2>What does a good expectancy look like?</h2>
+<p>Any number above zero means your strategy makes money on average. The stronger the edge, the higher the number will be relative to your average loss. If you risk $100 per trade and your expectancy is $20, you are making 20 cents for every dollar you put on the line. That is a real, repeatable business.</p>
+<p>Zero or negative expectancy means your strategy is not an edge. No amount of discipline or better entries will fix a negative-expectancy system. The fix has to happen at the strategy level, not the psychology level.</p>
+
+<h2>How to calculate your own expectancy</h2>
+<p>You need a real sample of trades to do this honestly. Twenty trades is too few to trust. A hundred or more gives you something worth acting on. Pull the numbers from your trading journal, plug them into the formula, and see what you get. If you do not have a journal yet, you do not have the data you need, and that is the first problem to solve. I walk through exactly how to keep one in <a href='/blog/how-to-keep-a-trading-journal.html'>how to keep a trading journal</a>.</p>
+<p>Once you have a number, recalculate it every few months. Expectancy can shift as markets change or as your execution improves. It is not a one-time test. It is an ongoing check on whether your edge is still working.</p>
+
+<h2>Why expectancy matters if you want to trade for a living</h2>
+<p>If your goal is to <a href='/trading-for-a-living.html'>trade for a living</a>, expectancy is the most honest test of whether you are ready. Positive expectancy with a large enough sample of trades is what separates a trader with a real process from someone on a lucky streak. Scale up your size only when the math is telling you the edge is real. The market is going to find out eventually, and it is a lot cheaper to find out from a spreadsheet first.</p>
+          <h2>Common questions</h2>
+          <h3>What is trading expectancy?</h3>
+          <p>Trading expectancy is the average amount you make or lose per trade across a large sample. It is calculated by multiplying your win rate by your average win, then subtracting your loss rate multiplied by your average loss. A positive result means your strategy has an edge.</p>
+          <h3>What is a good trading expectancy?</h3>
+          <p>Any positive number means your strategy makes money on average. The higher the expectancy relative to your average risk per trade, the stronger the edge. Negative expectancy means the strategy loses money over time regardless of how it feels in the short run.</p>
+          <h3>How do I calculate trading expectancy from my journal?</h3>
+          <p>From your trade history, find your win rate, your average winning trade size, your loss rate, and your average losing trade size. Then use this formula: (Win rate times Average win) minus (Loss rate times Average loss). You need at least 100 trades for the number to be reliable.</p>
+          <h3>Can a high win rate strategy still have negative expectancy?</h3>
+          <p>Yes. If your average loss is much larger than your average win, a high win rate can still produce a losing strategy. That is why expectancy is more honest than win rate alone.</p>
+          <h3>How often should I recalculate my trading expectancy?</h3>
+          <p>Every few months, or any time you change your strategy or notice a shift in your results. Expectancy can drift as markets change, so it is an ongoing measurement, not a one-time calculation.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/win-rate-vs-risk-reward.html">Win Rate vs Risk Reward: Which Matters More?</a></li>
+            <li><a href="/blog/how-to-keep-a-trading-journal.html">How to Keep a Trading Journal (And What to Actually Write)</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

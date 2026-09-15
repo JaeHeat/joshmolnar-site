@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Is a Tick in Futures Trading? | Josh Molnar</title>
+  <meta name="description" content="A tick is the smallest price move in futures. Learn tick size vs tick value, why they differ by contract, and how to size every trade from your stop." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/what-is-a-tick-in-futures-trading.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="What Is a Tick in Futures Trading?" />
+  <meta property="og:description" content="Most futures traders know the tick count. Far fewer know the dollar amount behind it. That gap is where positions go wrong." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/what-is-a-tick-in-futures-trading.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/what-is-a-tick-in-futures-trading.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="What Is a Tick in Futures Trading?" />
+  <meta name="twitter:description" content="Most futures traders know the tick count. Far fewer know the dollar amount behind it. That gap is where positions go wrong." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/what-is-a-tick-in-futures-trading.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Is a Tick in Futures Trading?",
+    "image": "https://joshmolnar.com/assets/blog/what-is-a-tick-in-futures-trading.jpg",
+    "description": "A tick is the smallest price move in futures. Learn tick size vs tick value, why they differ by contract, and how to size every trade from your stop.",
+    "datePublished": "2026-09-15",
+    "dateModified": "2026-09-15",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/what-is-a-tick-in-futures-trading.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a tick in futures trading?", "acceptedAnswer": {"@type": "Answer", "text": "A tick is the smallest amount a futures contract can move in price. Every futures market sets a minimum increment, and one step of that increment is one tick."}}, {"@type": "Question", "name": "What is tick value?", "acceptedAnswer": {"@type": "Answer", "text": "Tick value is the dollar amount one tick is worth in a specific contract. The NQ tick is worth 5 dollars, the ES tick is worth 12.50 dollars. Tick value is what converts a chart distance into a real dollar risk."}}, {"@type": "Question", "name": "How much is a tick worth in NQ futures?", "acceptedAnswer": {"@type": "Answer", "text": "One tick in the NQ (Nasdaq-100 mini futures) is worth 5 dollars. A 10-tick move in the NQ equals 50 dollars per contract."}}, {"@type": "Question", "name": "How much is a tick worth in ES futures?", "acceptedAnswer": {"@type": "Answer", "text": "One tick in the ES (S&amp;P 500 mini futures) is worth 12.50 dollars. A 10-tick move in the ES equals 125 dollars per contract."}}, {"@type": "Question", "name": "How do I use tick value to size a futures position?", "acceptedAnswer": {"@type": "Answer", "text": "Decide your dollar risk for the trade, measure your stop distance in ticks, multiply by tick value to get the per-contract risk, then divide your total dollar risk by that number to get your contract count."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>What Is a Tick in Futures Trading?</h1>
+          <div class="meta">By Josh Molnar &middot; September 2026 &middot; 6 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/what-is-a-tick-in-futures-trading.jpg" alt="Concept illustration explaining what a tick is in futures trading and how tick value determines dollar risk per contract" />
+          </figure>
+<p>A tick is the smallest price move a futures contract can make. Every futures market has a minimum increment, and one step in that increment is one tick. That is the whole definition. The concept sounds simple, but the part most new traders miss is that a tick is worth a different dollar amount depending on which contract they trade. That dollar amount is what you actually need to know before you size a single position.</p>
+
+<h2>Tick size and tick value are two different numbers</h2>
+<p>Tick size is the increment itself, expressed in price terms. Tick value is what one of those increments is worth in real dollars.</p>
+<p>The distinction matters because the math of every futures trade runs through tick value. If your stop is 20 ticks away from your entry, you need to know what 20 ticks costs in dollars before the trade goes on. Two contracts with the same tick count on the chart can have very different dollar risk, because the contracts are not the same size.</p>
+
+<h2>What ticks look like in two common contracts</h2>
+<p>The NQ (Nasdaq-100 futures) has a tick size of 0.25 index points and a tick value of 5 dollars. The ES (S&amp;P 500 futures) has a tick size of 0.25 index points and a tick value of 12.50 dollars.</p>
+<p>One tick in the ES is worth 2.5 times more than one tick in the NQ. A 10-tick stop in the ES is a 125-dollar risk. The same 10-tick stop in the NQ is a 50-dollar risk. Different contracts, identical tick count, very different money on the table.</p>
+<p>I have watched traders get the tick count right and the dollar math wrong, then wonder why their actual loss was larger than expected. It is not a small detail. Once you know the tick value of every contract you trade, you will never have that surprise again.</p>
+
+<h2>How to go from tick value to a real position size</h2>
+<p>Once you know tick value, sizing any futures position follows three steps.</p>
+<ol>
+<li>Decide your dollar risk for the trade. The standard starting point is 1 percent of your account, and the reasoning behind that number is in <a href='/blog/how-much-to-risk-per-trade.html'>how much to risk per trade</a>.</li>
+<li>Measure your stop distance in ticks. Mark your entry and your stop on the chart, count the ticks between them, then multiply by tick value to get the per-contract risk.</li>
+<li>Divide your dollar risk by your per-contract stop risk. That is your position size in contracts.</li>
+</ol>
+<p>Example: you are willing to risk 250 dollars. Your stop is 20 ticks in the ES, and 20 ticks at 12.50 dollars each is 250 dollars per contract. So you trade one contract. If you wanted to risk 500 dollars, you would trade two. The chart tells you where the stop goes, and the math tells you how many contracts.</p>
+<p>The position size comes from the formula, not from how confident you feel about the trade.</p>
+
+<h2>Why tick value matters more on a funded account</h2>
+<p>On a <a href='/prop-firm-trading.html'>prop firm funded account</a>, there is a daily loss limit. Lose more than that limit in a single day and the account is gone, no matter how close you are to the profit target. Vague tick math is one of the ways traders breach limits they should have avoided.</p>
+<p>The pattern is always the same. A trader thinks in round point numbers and never converts to dollars. The position moves against them, the real dollar loss is larger than expected, and after two or three trades like that the daily limit is gone. Knowing tick value exactly, before you put the trade on, is how you keep that from happening.</p>
+
+<h2>A quick reference for common contracts</h2>
+<ul>
+<li><strong>NQ (Nasdaq-100 mini):</strong> tick size 0.25 points, tick value 5 dollars. A 20-tick stop costs 100 dollars per contract.</li>
+<li><strong>ES (S&amp;P 500 mini):</strong> tick size 0.25 points, tick value 12.50 dollars. A 20-tick stop costs 250 dollars per contract.</li>
+<li><strong>GC (Gold futures):</strong> tick size 0.10 dollars per troy ounce, tick value 10 dollars. A 20-tick stop costs 200 dollars per contract.</li>
+</ul>
+<p>These are the contracts I trade or have traded. If you use something else, find the contract specification on the exchange website before you trade it, not after.</p>
+
+<h2>The bottom line</h2>
+<p>A tick is just the smallest unit of price movement in a futures contract. What matters in practice is the dollar value behind it. Before any futures trade, know how many dollars one tick is worth in that contract, size your position from your stop distance in dollars, and let the formula decide the contract count. That habit turns tick math from something you wing into something you never think about again. If you want to build this kind of process from the ground up, start with <a href='/trading-for-a-living.html'>what it actually takes to trade for a living</a>.</p>
+          <h2>Common questions</h2>
+          <h3>What is a tick in futures trading?</h3>
+          <p>A tick is the smallest amount a futures contract can move in price. Every futures market sets a minimum increment, and one step of that increment is one tick.</p>
+          <h3>What is tick value?</h3>
+          <p>Tick value is the dollar amount one tick is worth in a specific contract. The NQ tick is worth 5 dollars, the ES tick is worth 12.50 dollars. Tick value is what converts a chart distance into a real dollar risk.</p>
+          <h3>How much is a tick worth in NQ futures?</h3>
+          <p>One tick in the NQ (Nasdaq-100 mini futures) is worth 5 dollars. A 10-tick move in the NQ equals 50 dollars per contract.</p>
+          <h3>How much is a tick worth in ES futures?</h3>
+          <p>One tick in the ES (S&amp;P 500 mini futures) is worth 12.50 dollars. A 10-tick move in the ES equals 125 dollars per contract.</p>
+          <h3>How do I use tick value to size a futures position?</h3>
+          <p>Decide your dollar risk for the trade, measure your stop distance in ticks, multiply by tick value to get the per-contract risk, then divide your total dollar risk by that number to get your contract count.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/what-is-a-futures-contract.html">What Is a Futures Contract?</a></li>
+            <li><a href="/blog/how-much-to-risk-per-trade.html">How Much Should You Risk Per Trade? The 1% Rule</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

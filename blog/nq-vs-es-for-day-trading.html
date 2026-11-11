@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NQ vs ES for Day Trading: Which Should You Trade? | Josh Molnar</title>
+  <meta name="description" content="NQ vs ES for day trading: tick values, volatility, and which futures contract to start with. An honest comparison from a full-time futures trader." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/nq-vs-es-for-day-trading.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="NQ vs ES for Day Trading: Which Should You Trade?" />
+  <meta property="og:description" content="ES or NQ? The tick math, the volatility gap, and which contract I would start with if I were learning futures again." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/nq-vs-es-for-day-trading.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/nq-vs-es-for-day-trading.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="NQ vs ES for Day Trading: Which Should You Trade?" />
+  <meta name="twitter:description" content="ES or NQ? The tick math, the volatility gap, and which contract I would start with if I were learning futures again." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/nq-vs-es-for-day-trading.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "NQ vs ES for Day Trading: Which Should You Trade?",
+    "image": "https://joshmolnar.com/assets/blog/nq-vs-es-for-day-trading.jpg",
+    "description": "NQ vs ES for day trading: tick values, volatility, and which futures contract to start with. An honest comparison from a full-time futures trader.",
+    "datePublished": "2026-11-11",
+    "dateModified": "2026-11-11",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/nq-vs-es-for-day-trading.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between NQ and ES futures?", "acceptedAnswer": {"@type": "Answer", "text": "ES tracks the S&P 500 and pays $50 per point. NQ tracks the Nasdaq-100 and pays $20 per point. NQ is more volatile with larger daily point swings, while ES is more liquid with tighter spreads."}}, {"@type": "Question", "name": "Is NQ harder to trade than ES?", "acceptedAnswer": {"@type": "Answer", "text": "NQ is more volatile, which means larger swings in both directions. Many traders find ES easier to learn on because the moves are less extreme, though the same disciplined process applies to both."}}, {"@type": "Question", "name": "Which futures contract is better for beginners, NQ or ES?", "acceptedAnswer": {"@type": "Answer", "text": "Most experienced traders recommend starting with MES, the micro version of ES, because it is the most liquid futures market in the world and has a smaller daily range, giving beginners more room to learn execution."}}, {"@type": "Question", "name": "What are MNQ and MES in futures trading?", "acceptedAnswer": {"@type": "Answer", "text": "MNQ is the Micro E-mini Nasdaq-100 and MES is the Micro E-mini S&P 500. They are one-tenth the size of the standard NQ and ES contracts, paying $2 and $5 per point respectively, making them suitable for smaller accounts or traders learning execution."}}, {"@type": "Question", "name": "Can you trade NQ and ES on a prop firm funded account?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Both NQ and ES are available on most major prop firm platforms. Many funded traders use the micro versions, MNQ and MES, to meet daily loss limits and position sizing rules more cleanly."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>NQ vs ES for Day Trading: Which Should You Trade?</h1>
+          <div class="meta">By Josh Molnar &middot; November 2026 &middot; 5 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/nq-vs-es-for-day-trading.jpg" alt="Branded card comparing NQ vs ES futures contracts for day trading" />
+          </figure>
+<p>When people ask me which futures market to start with, they almost always mean NQ or ES. These two contracts dominate day trading conversations, and for good reason. They are the most liquid futures markets in the United States, they trade almost around the clock, and they appear on nearly every <a href='/prop-firm-trading.html'>prop firm trading</a> challenge list. Picking between them is one of the first real decisions a futures day trader makes, so let us look at what actually separates them.</p>
+
+<h2>What NQ and ES actually are</h2>
+<p>ES is the E-mini S&amp;P 500 futures contract. When you trade ES, you are tracking the S&amp;P 500 index, which holds 500 large American companies. NQ is the E-mini Nasdaq-100 futures contract. It tracks the Nasdaq-100, which holds 100 of the largest non-financial companies listed on the Nasdaq exchange, heavily concentrated in technology. Think Apple, Microsoft, Nvidia, Amazon, Meta. Both contracts trade on the CME Globex exchange, essentially 24 hours a day on weekdays.</p>
+
+<h2>The numbers that actually matter</h2>
+<p>Both contracts move in increments called ticks. The tick math is where most beginners get surprised.</p>
+<ul>
+<li>ES moves in 0.25-point ticks. Each tick is worth $12.50. That means every full point ES moves is worth $50 to you.</li>
+<li>NQ also moves in 0.25-point ticks. But each tick is worth $5.00. Every full point NQ moves is worth $20.</li>
+</ul>
+<p>At first glance, NQ looks cheaper. And per tick, it is. But here is the catch. NQ moves in much larger point swings than ES. Where ES might move 50 points on a typical morning, NQ might move 200 or 300 points in the same session. So while each NQ point costs less, the daily range in NQ produces a similar or larger dollar swing per contract than ES. The two contracts end up roughly comparable in terms of daily dollar exposure, with NQ often running hotter.</p>
+
+<h2>Volatility is the real difference</h2>
+<p>NQ is more volatile. This is not an opinion. The Nasdaq-100 is packed with high-growth technology companies that move fast and swing hard on earnings, economic news, and interest rate decisions. The S&amp;P 500 is a broader mix of energy, healthcare, industrials, consumer goods, and technology. That spread smooths out some of the sharper swings. NQ amplifies them.</p>
+<p>For day traders, more volatility means bigger moves to capture but also bigger moves against you. A 10-tick stop on ES costs $125. The same 10-tick stop on NQ costs $50. But if the market is moving 300 NQ points versus 60 ES points on a volatile day, the meaningful stop distance on NQ might be 30 to 50 ticks once you account for how the market actually breathes. The dollar risk per trade can land in the same neighborhood when you size properly for each contract.</p>
+
+<h2>Which contract suits a beginner</h2>
+<p>Most experienced futures traders recommend beginners start with ES, and I agree. The smaller daily range gives you more room to learn without the full force of Nasdaq volatility. ES is also the most liquid futures contract in the world, which means tight spreads and cleaner fills. When you are still learning to execute, that liquidity matters.</p>
+<p>I personally trade NQ more than ES now. The larger swings mean that when I find a clean setup, there is more to capture. But I spent time on ES first, and I think that sequencing matters. You learn the structure on the calmer market before adding the amplifier.</p>
+
+<h2>Starting smaller with the micro contracts</h2>
+<p>Both ES and NQ have micro versions that are one-tenth the size of the standard contracts. MES, the Micro E-mini S&amp;P 500, pays $1.25 per tick and $5 per full point. MNQ, the Micro E-mini Nasdaq-100, pays $0.50 per tick and $2 per full point. I cover how they work in more detail in <a href='/blog/what-are-micro-futures.html'>what are micro futures</a>.</p>
+<p>Micro contracts are the right starting point for most people. The dollar risk per trade is small enough that you can learn execution and risk management without the full financial pressure of the standard contract. Many traders I mentor use micro contracts as their primary vehicle long past the learning phase because the smaller size fits their account and risk rules cleanly.</p>
+
+<h2>The honest bottom line</h2>
+<p>Both NQ and ES are serious markets with real edges available for a disciplined trader. Neither is easier in the sense most people mean when they ask that question. What matters is matching the contract to where you are in your development. If you are new to futures, start with MES. Learn the tick math, the execution, and what a real intraday range feels like before trading the full contract. When that feels comfortable, you will have an honest read on whether the amplifier that NQ offers fits your process, or whether the cleaner structure of ES is a better home.</p>
+<p>The contract you pick matters far less than how much you risk per trade and how consistently you follow your rules. The goal is to stay in this long enough to get good at it. That is the whole argument for <a href='/trading-for-a-living.html'>trading for a living</a>, and it starts with process, not ticker selection.</p>
+          <h2>Common questions</h2>
+          <h3>What is the difference between NQ and ES futures?</h3>
+          <p>ES tracks the S&P 500 and pays $50 per point. NQ tracks the Nasdaq-100 and pays $20 per point. NQ is more volatile with larger daily point swings, while ES is more liquid with tighter spreads.</p>
+          <h3>Is NQ harder to trade than ES?</h3>
+          <p>NQ is more volatile, which means larger swings in both directions. Many traders find ES easier to learn on because the moves are less extreme, though the same disciplined process applies to both.</p>
+          <h3>Which futures contract is better for beginners, NQ or ES?</h3>
+          <p>Most experienced traders recommend starting with MES, the micro version of ES, because it is the most liquid futures market in the world and has a smaller daily range, giving beginners more room to learn execution.</p>
+          <h3>What are MNQ and MES in futures trading?</h3>
+          <p>MNQ is the Micro E-mini Nasdaq-100 and MES is the Micro E-mini S&P 500. They are one-tenth the size of the standard NQ and ES contracts, paying $2 and $5 per point respectively, making them suitable for smaller accounts or traders learning execution.</p>
+          <h3>Can you trade NQ and ES on a prop firm funded account?</h3>
+          <p>Yes. Both NQ and ES are available on most major prop firm platforms. Many funded traders use the micro versions, MNQ and MES, to meet daily loss limits and position sizing rules more cleanly.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/what-are-micro-futures.html">What Are Micro Futures?</a></li>
+            <li><a href="/blog/how-to-trade-futures-for-beginners.html">How to Trade Futures for Beginners</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>

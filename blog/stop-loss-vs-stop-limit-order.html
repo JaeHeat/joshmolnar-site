@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stop Loss vs Stop Limit Order: Which One Protects You? | Josh Molnar</title>
+  <meta name="description" content="Stop loss vs stop limit order, in plain English. One always gets you out. The other can leave you stuck in a losing trade. Here is which one I use." />
+  <link rel="canonical" href="https://joshmolnar.com/blog/stop-loss-vs-stop-limit-order.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Stop Loss vs Stop Limit Order: Which One Protects You?" />
+  <meta property="og:description" content="One exit order promises you get out. The other promises a price. In a fast market you can only have one of those." />
+  <meta property="og:url" content="https://joshmolnar.com/blog/stop-loss-vs-stop-limit-order.html" />
+  <meta property="og:image" content="https://joshmolnar.com/assets/blog/stop-loss-vs-stop-limit-order.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Stop Loss vs Stop Limit Order: Which One Protects You?" />
+  <meta name="twitter:description" content="One exit order promises you get out. The other promises a price. In a fast market you can only have one of those." />
+  <meta name="twitter:image" content="https://joshmolnar.com/assets/blog/stop-loss-vs-stop-limit-order.jpg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Stop Loss vs Stop Limit Order: Which One Protects You?",
+    "image": "https://joshmolnar.com/assets/blog/stop-loss-vs-stop-limit-order.jpg",
+    "description": "Stop loss vs stop limit order, in plain English. One always gets you out. The other can leave you stuck in a losing trade. Here is which one I use.",
+    "datePublished": "2026-11-19",
+    "dateModified": "2026-11-19",
+    "mainEntityOfPage": "https://joshmolnar.com/blog/stop-loss-vs-stop-limit-order.html",
+    "author": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar", "url": "https://joshmolnar.com/" },
+    "publisher": { "@type": "Person", "@id": "https://joshmolnar.com/#person", "name": "Josh Molnar" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the difference between a stop loss and a stop limit order?", "acceptedAnswer": {"@type": "Answer", "text": "A stop loss turns into a market order when your stop price is touched, so it gets you out at the best price available. A stop limit turns into a limit order, so it only fills at your limit price or better and may not fill at all."}}, {"@type": "Question", "name": "Can a stop limit order fail to fill?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If the price jumps past your limit price before the order can fill, it sits unfilled while the market keeps moving against you."}}, {"@type": "Question", "name": "Is a stop loss or a stop limit better for day trading?", "acceptedAnswer": {"@type": "Answer", "text": "For getting out of a losing trade I use a plain stop loss, because the job of that order is to end the trade. A stop limit fits better for entries, where missing the fill costs nothing."}}, {"@type": "Question", "name": "Does a stop loss order guarantee my exit price?", "acceptedAnswer": {"@type": "Answer", "text": "No. In a fast market the price can skip past your stop, and you get filled at a worse price than planned. That gap is called slippage."}}, {"@type": "Question", "name": "Is a stop market order the same as a stop loss?", "acceptedAnswer": {"@type": "Answer", "text": "On most platforms, yes. A stop market order is the standard stop loss, an order that waits at your stop price and then sells at the best price available."}}]}
+  </script>
+</head>
+<body>
+  <header class="site">
+    <div class="wrap nav">
+      <a class="brand" href="/">Josh <span>Molnar</span></a>
+      <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">&#9776;</button>
+      <ul id="nav">
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/trading-for-a-living.html">Trading</a></li>
+        <li><a href="/bitcoin-daily.html">Bitcoin Daily</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a class="cta-secondary" href="https://bitcoindaily.app" rel="noopener">Work with me</a></li>
+        <li><a class="cta" href="https://bitcoindaily.vip" rel="noopener">Trade with me</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="block" style="border-bottom:none">
+      <div class="wrap">
+        <article class="post">
+          <h1>Stop Loss vs Stop Limit Order: Which One Protects You?</h1>
+          <div class="meta">By Josh Molnar &middot; November 2026 &middot; 6 min read</div>
+
+          <figure class="post-hero">
+            <img src="/assets/blog/stop-loss-vs-stop-limit-order.jpg" alt="Branded card for a plain English comparison of a stop loss vs stop limit order for exiting a trade" />
+          </figure>
+<p>Most trading platforms give you two exit orders that sound almost the same. One is a stop loss. The other is a stop limit. People I mentor mix them up all the time, and I understand why. The names are one word apart. The difference only shows up on the worst day, when the market is moving fast and you need out. So here is stop loss vs stop limit in plain English, and which one I trust with my own money.</p>
+
+<h2>What a stop loss order does</h2>
+<p>A stop loss order is an instruction that waits. You pick a price, called the stop price. Nothing happens until the market touches it. The moment it does, your order wakes up and sells at the best price available right then.</p>
+<p>Some platforms call this a stop market order. It is the same thing. Once it wakes up, it behaves like a <a href='/blog/limit-order-vs-market-order.html'>market order</a>, which means it takes whatever price is there.</p>
+<p>Here is the trade you are making. A stop loss gives you a very strong chance of getting out. It does not promise the price. On a calm day you will usually get out right next to your stop. On a wild day the price can jump past your level before your order fills, and you get out lower than you planned.</p>
+
+<h2>What a stop limit order does</h2>
+<p>A stop limit order has two prices instead of one. The first is the stop price, which wakes the order up. The second is the limit price, which is the worst price you are willing to accept.</p>
+<p>Say I own something at 100. I set a stop price of 98 and a limit price of 97.50. If the market falls to 98, my order wakes up. It will now sell, but only at 97.50 or better. It refuses anything lower.</p>
+<p>That sounds like the smarter order. You get protection and you get a say in the price. The catch is what happens when the price does not cooperate.</p>
+
+<h2>Stop loss vs stop limit when the market jumps</h2>
+<p>Picture bad news hitting while you are in that trade. The price does not walk down from 100 to 98 to 97. It skips. One moment it is at 99, and the next trade happens at 96.</p>
+<ul>
+<li><strong>With the stop loss,</strong> you are out near 96. That is worse than the 98 you wanted. It stings, and it is over.</li>
+<li><strong>With the stop limit,</strong> your order wakes up and asks for 97.50 or better. Nobody is paying that. So it sits there unfilled while the price keeps falling to 95, then 93, then 90.</li>
+</ul>
+<p>Think of a fire door. A stop loss is a door that always opens, even if you scrape your arm on the way out. A stop limit is a door that only opens if the hallway on the other side looks nice. In a real fire, that second door stays shut.</p>
+<p>That is the whole difference. A stop loss can cost you a little extra on the exit. A stop limit can cost you the exit itself.</p>
+
+<h2>Which one I use and why</h2>
+<p>For getting out of a losing trade, I use a plain stop loss. Every time. The job of that order is to end the trade when I am wrong. An exit order that might not exit is not doing the job.</p>
+<p>I accept that some fills will be a bit worse than my stop price. That extra cost has a name, <a href='/blog/what-is-slippage-in-trading.html'>slippage</a>, and I treat it like a toll. I would rather pay a small toll than be stuck on the road.</p>
+<p>This matters even more on <a href='/prop-firm-trading.html'>funded prop firm accounts</a>. Those accounts have hard loss rules. A stop limit that never fills can turn one planned small loss into a broken rule and a closed account.</p>
+
+<h2>When a stop limit order does make sense</h2>
+<p>I do not think stop limits are useless. I use the same idea for getting <em>into</em> trades. If I want to buy only when the price pushes above a level, a stop limit lets me say buy if it gets to 101, but do not pay more than 101.50. If the price rockets past and I miss it, fine. Missing an entry costs me nothing. Missing an exit can cost me a lot.</p>
+<p>Some traders also use them in very thin markets, where there are so few buyers and sellers that a plain stop could fill at a silly price. That is a real concern. My answer is to stay out of markets like that as a day trader, not to remove my safety exit.</p>
+
+<h2>Check how your own platform does it</h2>
+<p>Brokers and exchanges do not all use the same names or the same rules. Some wake the order up on the last traded price. Others use a different price. Crypto exchanges often show a trigger price and an order price in the same box, which is a stop limit even if the button just says stop. I walk through more of those traps in my guide to <a href='/day-trading-crypto.html'>day trading crypto</a>.</p>
+<p>Before real money is involved, place both order types on a demo account. Watch what each one does when the price reaches it. Ten minutes of practice will teach you more than any definition.</p>
+
+<h2>The bottom line</h2>
+<p>A stop loss promises the exit and not the price. A stop limit promises the price and not the exit. When I am wrong on a trade, the exit is the thing I care about. No order type makes trading safe, and most traders still lose money. Picking the right exit order just makes sure that when you plan a small loss, a small loss is what you get most of the time.</p>
+          <h2>Common questions</h2>
+          <h3>What is the difference between a stop loss and a stop limit order?</h3>
+          <p>A stop loss turns into a market order when your stop price is touched, so it gets you out at the best price available. A stop limit turns into a limit order, so it only fills at your limit price or better and may not fill at all.</p>
+          <h3>Can a stop limit order fail to fill?</h3>
+          <p>Yes. If the price jumps past your limit price before the order can fill, it sits unfilled while the market keeps moving against you.</p>
+          <h3>Is a stop loss or a stop limit better for day trading?</h3>
+          <p>For getting out of a losing trade I use a plain stop loss, because the job of that order is to end the trade. A stop limit fits better for entries, where missing the fill costs nothing.</p>
+          <h3>Does a stop loss order guarantee my exit price?</h3>
+          <p>No. In a fast market the price can skip past your stop, and you get filled at a worse price than planned. That gap is called slippage.</p>
+          <h3>Is a stop market order the same as a stop loss?</h3>
+          <p>On most platforms, yes. A stop market order is the standard stop loss, an order that waits at your stop price and then sells at the best price available.</p>
+          <h2>Keep reading</h2>
+          <ul>
+            <li><a href="/blog/limit-order-vs-market-order.html">Limit Order vs Market Order: Which Should You Use?</a></li>
+            <li><a href="/blog/what-is-a-bracket-order.html">What Is a Bracket Order? Entry, Stop and Target in One</a></li>
+          </ul>
+          <p>I trade and teach this for a living. I post free breakdowns on <a href="https://www.instagram.com/bitcoin.daily/" rel="noopener">Instagram</a> and <a href="https://www.youtube.com/@BitcoinDailyTV" rel="noopener">YouTube</a>, and you can trade alongside me and the community at <a href="https://bitcoindaily.vip" rel="noopener">bitcoindaily.vip</a>. For one-on-one help, <a href="https://bitcoindaily.app" rel="noopener">work with me directly</a>.</p>
+          <p><em>Nothing here is financial advice. Trading carries a real risk of loss and most traders lose money. Never trade money you cannot afford to lose.</em></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap row">
+      <div>&copy; 2026 Josh Molnar &middot; Full-Time Trader &amp; Founder of Bitcoin Daily</div>
+      <div><a href="/about.html">About</a> &middot; <a href="/press.html">Press</a> &middot; <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>
